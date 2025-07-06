@@ -811,7 +811,7 @@ function App() {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="flex space-x-8">
+            <nav className="hidden md:flex space-x-4 lg:space-x-8">
               {tabs.map((tab) => (
                 <Link
                   key={tab.id}
@@ -828,7 +828,7 @@ function App() {
             </nav>
 
             {/* Mobile menu button */}
-            <div className="hidden flex-shrink-0">
+            <div className="md:hidden flex-shrink-0">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
