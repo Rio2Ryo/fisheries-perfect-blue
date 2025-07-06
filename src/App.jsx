@@ -586,8 +586,8 @@ function App() {
             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">従来の藻養殖との比較</h3>
               
-              {/* Desktop Table */}
-              <div className="hidden md:block overflow-x-auto">
+              {/* Comparison Table */}
+              <div className="overflow-x-auto">
                 <table className="w-full bg-white rounded-lg shadow-md">
                   <thead className="bg-blue-600 text-white">
                     <tr>
@@ -621,8 +621,8 @@ function App() {
                 </table>
               </div>
 
-              {/* Mobile Cards */}
-              <div className="md:hidden space-y-4">
+              {/* Mobile Cards - Temporarily Hidden */}
+              <div className="hidden space-y-4">
                 <div className="bg-white rounded-lg shadow-md p-4">
                   <h4 className="font-bold text-gray-900 mb-3">育成スピード</h4>
                   <div className="space-y-2">
