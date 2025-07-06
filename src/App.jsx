@@ -29,20 +29,20 @@ function App() {
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <Waves className="w-6 h-6 text-white" />
+            <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Waves className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h1 className="text-lg sm:text-xl font-bold text-gray-900">全国姉妹漁協推進協議会</h1>
+              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900">全国姉妹漁協推進協議会</h1>
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="flex space-x-4 md:space-x-8">
+            <nav className="hidden md:flex space-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => handleTabChange(tab.id)}
-                  className={`px-2 md:px-3 py-2 text-xs md:text-sm font-medium transition-colors duration-200 border-b-2 ${
+                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2 ${
                     activeTab === tab.id
                       ? 'text-blue-600 border-blue-600'
                       : 'text-gray-600 hover:text-blue-600 border-transparent hover:border-blue-300'
@@ -54,12 +54,13 @@ function App() {
             </nav>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="md:hidden flex-shrink-0">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                aria-label="メニューを開く"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
