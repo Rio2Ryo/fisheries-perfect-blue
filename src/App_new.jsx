@@ -194,6 +194,7 @@ const HomePage = () => (
   </div>
 )
 
+// 他のページコンポーネントは簡易版として作成
 const MarinePage = () => (
   <div className="space-y-8">
     <div className="text-center">
