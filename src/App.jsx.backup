@@ -1,0 +1,717 @@
+import { useState } from 'react'
+import { Building2, Waves, Ship, Truck, Leaf, MapPin, Phone, Mail, ArrowRight, ChevronRight, Factory, Users, Target } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
+import './App.css'
+
+function App() {
+  const [activeTab, setActiveTab] = useState('home')
+
+  const tabs = [
+    { id: 'home', label: 'ホーム', color: 'bg-blue-600 hover:bg-blue-700' },
+    { id: 'about', label: 'About us', color: 'bg-blue-500 hover:bg-blue-600' },
+    { id: 'marine', label: '海業', color: 'bg-blue-600 hover:bg-blue-700' },
+    { id: 'rv', label: 'RV', color: 'bg-blue-700 hover:bg-blue-800' },
+    { id: 'seaweed', label: '藻の養殖', color: 'bg-blue-800 hover:bg-blue-900' },
+    { id: 'company', label: '会社概要', color: 'bg-blue-900 hover:bg-blue-950' },
+    { id: 'contact', label: 'お問い合わせ', color: 'bg-blue-500 hover:bg-blue-600' }
+  ]
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                <Waves className="w-6 h-6 text-white" />
+              </div>
+              <h1 className="text-xl font-bold text-gray-900">全国姉妹漁協推進協議会</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Navigation Tabs */}
+      <nav className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex space-x-1 overflow-x-auto py-2">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                  activeTab === tab.id
+                    ? `${tab.color} text-white shadow-md`
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {activeTab === 'home' && (
+          <div className="space-y-16">
+            {/* Hero Section */}
+            <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="relative px-8 py-16 sm:px-16 sm:py-24 text-center">
+                <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+                  REBONE THE SEA
+                </h2>
+                <p className="text-xl text-blue-100 mb-8">
+                  これからの新しい海づくり
+                </p>
+                <p className="text-lg text-blue-50 max-w-4xl mx-auto mb-12 leading-relaxed">
+                  海業推進を基軸とし、漁業の枠を超えた多角的な事業展開で日本の沿岸地域の活性化に貢献しています。
+                  独自の技術と全国の漁業組合との連携により、持続可能な海洋資源の活用を実現します。
+                </p>
+                <button 
+                  onClick={() => setActiveTab('contact')}
+                  className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg"
+                >
+                  <span>お問い合わせはこちら</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+            </section>
+
+            {/* Business Overview */}
+            <section>
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">事業概要</h3>
+                <p className="text-lg text-gray-600">
+                  海業・RV・藻の養殖の3つの柱で、新しい海洋ビジネスを展開しています
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Marine Business */}
+                <Card className="group hover:shadow-xl transition-all duration-300 border border-blue-200 bg-white">
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                      <Waves className="w-6 h-6 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-gray-900">海業・水産事業</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-700 leading-relaxed">
+                      漁業の枠を超えた多角的な事業展開を行っています。漁港での体験型観光漁業、地域の漁師との交流、獲れたての海産物をその場で実食など、海業と連携した環境教育プログラムを実施。
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>体験型観光漁業</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>地域漁師との交流</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span>環境教育プログラム</span>
+                      </div>
+                    </div>
+                    <button 
+                      onClick={() => setActiveTab('marine')}
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-6 font-medium"
+                    >
+                      <span>詳細を見る</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </CardContent>
+                </Card>
+
+                {/* RV Business */}
+                <Card className="group hover:shadow-xl transition-all duration-300 border border-blue-200 bg-white">
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                      <Truck className="w-6 h-6 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-gray-900">RV事業</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-700 leading-relaxed">
+                      移動式ホテルとして機能し、海業を活用した独自の飲食や体験プログラムを展開。夜間移動による効率的な旅行を実現し、漁港をRVパークとして活用することで、ユニークな滞在体験を提供。
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-700 rounded-full"></div>
+                        <span>移動式ホテル</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-700 rounded-full"></div>
+                        <span>RVパーク運営</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-700 rounded-full"></div>
+                        <span>災害時対応</span>
+                      </div>
+                    </div>
+                    <button 
+                      onClick={() => setActiveTab('rv')}
+                      className="w-full bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-800 transition-colors duration-200 flex items-center justify-center space-x-2 mt-6 font-medium"
+                    >
+                      <span>詳細を見る</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </CardContent>
+                </Card>
+
+                {/* Seaweed Cultivation */}
+                <Card className="group hover:shadow-xl transition-all duration-300 border border-blue-200 bg-white">
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mb-4">
+                      <Leaf className="w-6 h-6 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-gray-900">藻の養殖</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-700 leading-relaxed">
+                      独自の特許技術によって藻の養殖に成功。通常数ヶ月かかる養殖をたった24時間で同等レベルまで成長させることに成功。この技術を用いて日本中の沿岸に藻を養殖させて、健康的な魚を育成。
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
+                        <span>特許技術</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
+                        <span>24時間養殖</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
+                        <span>スピルリナ抽出</span>
+                      </div>
+                    </div>
+                    <button 
+                      onClick={() => setActiveTab('seaweed')}
+                      className="w-full bg-blue-800 text-white py-3 rounded-lg hover:bg-blue-900 transition-colors duration-200 flex items-center justify-center space-x-2 mt-6 font-medium"
+                    >
+                      <span>詳細を見る</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            {/* Why Choose Us */}
+            <section className="bg-white rounded-2xl p-8 sm:p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">なぜ私たちが選ばれるのか</h3>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">全国ネットワーク</h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    全国の漁業組合員数はおよそ15万人。準組合員数はおよそ16万人。31万人の組合員のネットワークを使用し海業をさらに発展させています。
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <Factory className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">独自技術</h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    豪フリンダース大学との共同研究により、革新的な藻類ゲノム解析技術を確立。24時間で藻を成長させる特許技術を保有。
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">多角的事業展開</h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    海業・RV・藻の養殖を組み合わせた独自のビジネスモデルで、持続可能な海洋資源活用を実現。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Company Overview Card */}
+            <section>
+              <Card className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="mb-6 md:mb-0">
+                      <h3 className="text-2xl font-bold mb-2">会社概要</h3>
+                      <div className="space-y-2 text-blue-100">
+                        <div className="flex items-center space-x-3">
+                          <Building2 className="w-5 h-5" />
+                          <span>会社名</span>
+                          <span className="text-white">全国姉妹漁協推進協議会株式会社</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <MapPin className="w-5 h-5" />
+                          <span>所在地</span>
+                          <span className="text-white">静岡県賀茂郡河津町</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <Waves className="w-5 h-5" />
+                          <span>事業内容</span>
+                          <span className="text-white">海業・RV・藻の養殖</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button 
+                      onClick={() => setActiveTab('company')}
+                      className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2"
+                    >
+                      <span>詳細を見る</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
+          </div>
+        )}
+
+        {/* About Us Section */}
+        {activeTab === 'about' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">About us</h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <Waves className="w-8 h-8 text-blue-600" />
+                <h3 className="text-2xl font-bold text-blue-900">私たちの使命</h3>
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-gray-700">
+                <p className="mb-6">
+                  全国姉妹漁協推進協議会は、日本の沿岸地域の持続可能な発展を目指し、海業推進を基軸とした革新的な事業展開を行っています。
+                </p>
+                <p className="mb-6">
+                  私たちは、従来の漁業の枠を超えて、海洋資源を多角的に活用することで、地域経済の活性化と環境保全の両立を実現しています。
+                </p>
+                <p>
+                  全国31万人の漁業組合員ネットワークと最先端の技術を組み合わせることで、新しい海洋ビジネスモデルを創造し、次世代に豊かな海を継承していきます。
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Marine Business Section */}
+        {activeTab === 'marine' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">海業・水産事業</h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <Waves className="w-8 h-8 text-blue-600" />
+                <h3 className="text-2xl font-bold text-blue-900">海業事業の概要</h3>
+              </div>
+              
+              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                漁業の枠を超えた多角的な事業展開を行っています。漁港での体験型観光漁業、地域の漁師との交流、獲れたての海産物をその場で実食など、海業と連携した環境教育プログラムを実施。
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Ship className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">体験型観光漁業</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      漁港を活用した観光体験プログラムの企画・運営
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Building2 className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">地域漁師との交流</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      地域の漁師との連携による文化交流プログラム
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Leaf className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">環境教育プログラム</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      海洋環境保全に関する教育・営業活動
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* RV Business Section */}
+        {activeTab === 'rv' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">RV事業</h2>
+              <div className="w-24 h-1 bg-blue-700 mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <Truck className="w-8 h-8 text-blue-700" />
+                <h3 className="text-2xl font-bold text-blue-900">RV事業の概要</h3>
+              </div>
+              
+              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                移動式ホテルとして機能し、海業を活用した独自の飲食や体験プログラムを展開。夜間移動による効率的な旅行を実現し、漁港をRVパークとして活用することで、ユニークな滞在体験を提供。
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                      <Building2 className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">移動式ホテル</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      高品質な宿泊体験を提供する移動式ホテルサービス
+                    </p>
+                    <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                      宿泊事業
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">RVパーク運営</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      漁港を活用したRVパークの運営・管理
+                    </p>
+                    <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                      施設運営
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                      <Waves className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">災害時対応</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      災害時の緊急避難施設としての機能提供
+                    </p>
+                    <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                      社会貢献
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Seaweed Cultivation Section */}
+        {activeTab === 'seaweed' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">藻の養殖</h2>
+              <div className="w-24 h-1 bg-blue-800 mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <Leaf className="w-8 h-8 text-blue-800" />
+                <h3 className="text-2xl font-bold text-blue-900">藻の養殖事業の概要</h3>
+              </div>
+              
+              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                独自の特許技術によって藻の養殖に成功。通常数ヶ月かかる養殖をたった24時間で同等レベルまで成長させることに成功。この技術を用いて日本中の沿岸に藻を養殖させて、健康的な魚を育成。
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Leaf className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">特許技術</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      革新的な藻類ゲノム解析技術による高速養殖システム
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Waves className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">24時間養殖</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      従来の数ヶ月から24時間への大幅な時間短縮を実現
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 bg-white shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Building2 className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-blue-900 mb-3">スピルリナ抽出</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      高品質なスピルリナの抽出・製品化技術
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Company Section */}
+        {activeTab === 'company' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">会社概要</h2>
+              <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-6">企業情報</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <Building2 className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <dt className="font-semibold text-gray-900">会社名</dt>
+                        <dd className="text-gray-700">全国姉妹漁協推進協議会株式会社</dd>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <dt className="font-semibold text-gray-900">所在地</dt>
+                        <dd className="text-gray-700">静岡県賀茂郡河津町</dd>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Waves className="w-5 h-5 text-blue-600 mt-1" />
+                      <div>
+                        <dt className="font-semibold text-gray-900">事業内容</dt>
+                        <dd className="text-gray-700">海業・RV・藻の養殖</dd>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-6">企業理念</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    私たちは、海洋資源の持続可能な活用を通じて、日本の沿岸地域の発展に貢献します。
+                    革新的な技術と全国のネットワークを活かし、次世代に豊かな海を継承していくことが私たちの使命です。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Contact Section */}
+        {activeTab === 'contact' && (
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-6">お気軽にお問い合わせください</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    海業事業、RV事業、藻の養殖に関するご質問やご相談がございましたら、お気軽にお問い合わせください。
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <Phone className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">電話番号</div>
+                        <div className="text-gray-700">0558-34-1025</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <Mail className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">メールアドレス</div>
+                        <div className="text-gray-700">info@sis-mo.com</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <MapPin className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">所在地</div>
+                        <div className="text-gray-700">静岡県賀茂郡河津町</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">営業時間</h4>
+                  <div className="space-y-2 text-gray-700">
+                    <div className="flex justify-between">
+                      <span>平日</span>
+                      <span>9:00 - 18:00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>土曜日</span>
+                      <span>9:00 - 17:00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>日曜・祝日</span>
+                      <span>休業</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Waves className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold">全国姉妹漁協推進協議会</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">事業内容</h4>
+              <div className="grid grid-cols-2 gap-4">
+                <button 
+                  onClick={() => setActiveTab('marine')}
+                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  海業・水産事業
+                </button>
+                <button 
+                  onClick={() => setActiveTab('rv')}
+                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  RV事業
+                </button>
+                <button 
+                  onClick={() => setActiveTab('seaweed')}
+                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  藻の養殖
+                </button>
+                <button 
+                  onClick={() => setActiveTab('company')}
+                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  漁港活用支援
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              <div className="flex space-x-6 mb-4 md:mb-0">
+                <button 
+                  onClick={() => setActiveTab('about')}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => setActiveTab('marine')}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  海業
+                </button>
+                <button 
+                  onClick={() => setActiveTab('rv')}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  RV
+                </button>
+                <button 
+                  onClick={() => setActiveTab('seaweed')}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  藻の養殖
+                </button>
+                <button 
+                  onClick={() => setActiveTab('company')}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  会社概要
+                </button>
+                <button 
+                  onClick={() => setActiveTab('contact')}
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  お問い合わせ
+                </button>
+              </div>
+              <div className="text-gray-400 text-sm">
+                TEL: 0558-34-1025
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default App
+
