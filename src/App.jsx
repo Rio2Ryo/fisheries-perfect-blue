@@ -37,12 +37,12 @@ function App() {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="flex space-x-4 md:space-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => handleTabChange(tab.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2 ${
+                  className={`px-2 md:px-3 py-2 text-xs md:text-sm font-medium transition-colors duration-200 border-b-2 ${
                     activeTab === tab.id
                       ? 'text-blue-600 border-blue-600'
                       : 'text-gray-600 hover:text-blue-600 border-transparent hover:border-blue-300'
@@ -587,7 +587,7 @@ function App() {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">従来の藻養殖との比較</h3>
               
               {/* Desktop Table */}
-              <div className="hidden lg:block overflow-x-auto">
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full bg-white rounded-lg shadow-md">
                   <thead className="bg-blue-600 text-white">
                     <tr>
@@ -622,7 +622,7 @@ function App() {
               </div>
 
               {/* Mobile Cards */}
-              <div className="lg:hidden space-y-4">
+              <div className="md:hidden space-y-4">
                 <div className="bg-white rounded-lg shadow-md p-4">
                   <h4 className="font-bold text-gray-900 mb-3">育成スピード</h4>
                   <div className="space-y-2">
