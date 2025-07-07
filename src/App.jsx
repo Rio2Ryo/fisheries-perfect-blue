@@ -810,17 +810,17 @@ function App() {
               <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 truncate">全国姉妹漁協推進協議会</h1>
             </div>
             
-            {/* Desktop Navigation - 一時的にデバッグのため表示 */}
-            <nav className="block bg-red-100" role="navigation" aria-label="メインナビゲーション">
-              <ul className="flex space-x-6">
+            {/* Desktop Navigation */}
+            <nav className="hidden md:block" role="navigation" aria-label="メインナビゲーション">
+              <ul className="flex items-center space-x-1">
                 {navigationItems.map((item) => (
                   <li key={item.id}>
                     <Link
                       to={item.path}
-                      className={`px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2 whitespace-nowrap hover:text-blue-600 ${
+                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                         location.pathname === item.path
-                          ? 'text-blue-600 border-blue-600'
-                          : 'text-gray-600 border-transparent hover:border-blue-300'
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-700 hover:bg-gray-100'
                       }`}
                       aria-current={location.pathname === item.path ? 'page' : undefined}
                     >
@@ -832,7 +832,7 @@ function App() {
             </nav>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden flex-shrink-0">
+            <div className="md:hidden flex-shrink-0">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
@@ -845,8 +845,8 @@ function App() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden bg-white border-t transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        <div className={`md:hidden bg-white border-t transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <nav role="navigation" aria-label="モバイルナビゲーション">
             <ul className="px-2 pt-2 pb-3 space-y-1">
