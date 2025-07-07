@@ -70,7 +70,7 @@ const HomePage = () => (
             </div>
             <Link
               to="/marine"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-6 font-medium"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
             >
               <span>詳細を見る</span>
               <ChevronRight className="w-4 h-4" />
@@ -106,7 +106,7 @@ const HomePage = () => (
             </div>
             <Link
               to="/seaweed"
-              className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-6 font-medium"
+              className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
             >
               <span>詳細を見る</span>
               <ChevronRight className="w-4 h-4" />
@@ -160,9 +160,9 @@ const HomePage = () => (
       <Card className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <CardContent className="p-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">会社概要</h3>
-              <div className="space-y-2 text-blue-100">
+            <div className="mb-8 md:mb-0">
+              <h3 className="text-2xl font-bold mb-4">会社概要</h3>
+              <div className="space-y-3 text-blue-100">
                 <div className="flex items-center space-x-3">
                   <Building2 className="w-5 h-5" />
                   <span>会社名</span>
@@ -180,13 +180,15 @@ const HomePage = () => (
                 </div>
               </div>
             </div>
-            <Link
-              to="/company"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2"
-            >
-              <span>詳細を見る</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
+            <div className="mt-6 md:mt-0 md:ml-8">
+              <Link
+                to="/company"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2 shadow-md"
+              >
+                <span>詳細を見る</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </CardContent>
       </Card>
