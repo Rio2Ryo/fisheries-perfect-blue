@@ -180,7 +180,7 @@ const HomePage = () => (
                 </div>
               </div>
             </div>
-            <div className="flex-shrink-0 md:ml-12">
+            <div className="flex-shrink-0 md:ml-12 md:mt-8">
               <Link
                 to="/company"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2 shadow-md"
