@@ -166,7 +166,7 @@ const HomePage = () => (
                 <div className="flex items-center space-x-3">
                   <Building2 className="w-5 h-5" />
                   <span>会社名</span>
-                  <span className="text-white">全国姉妹漁協推進協議会株式会社</span>
+                  <span className="text-white">株式会社全国姉妹漁協推進協議会</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5" />
@@ -558,7 +558,7 @@ const CompanyPage = () => (
               <Building2 className="w-5 h-5 text-blue-600 mt-1" />
               <div>
                 <dt className="font-semibold text-gray-900">会社名</dt>
-                <dd className="text-gray-700">全国姉妹漁協推進協議会株式会社</dd>
+                <dd className="text-gray-700">株式会社全国姉妹漁協推進協議会</dd>
               </div>
             </div>
             <div className="flex items-start space-x-3">
@@ -809,7 +809,7 @@ function App() {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Waves className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 truncate">全国姉妹漁協推進協議会</h1>
+              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 truncate">株式会社全国姉妹漁協推進協議会</h1>
             </div>
             
             {/* Desktop Navigation */}
@@ -893,7 +893,7 @@ function App() {
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                   <Waves className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">全国姉妹漁協推進協議会</h3>
+                <h3 className="text-xl font-bold">株式会社全国姉妹漁協推進協議会</h3>
               </div>
               <p className="text-gray-300 leading-relaxed">
                 海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。
