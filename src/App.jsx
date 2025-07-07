@@ -784,12 +784,12 @@ function App() {
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const tabs = [
-    { id: '/', label: 'ホーム', path: '/' },
-    { id: '/marine', label: '海業', path: '/marine' },
-    { id: '/seaweed', label: '藻の養殖', path: '/seaweed' },
-    { id: '/company', label: '会社概要', path: '/company' },
-    { id: '/contact', label: 'お問い合わせ', path: '/contact' }
+  const navigationItems = [
+    { id: 'home', label: 'ホーム', path: '/' },
+    { id: 'marine', label: '海業', path: '/marine' },
+    { id: 'seaweed', label: '藻の養殖', path: '/seaweed' },
+    { id: 'company', label: '会社概要', path: '/company' },
+    { id: 'contact', label: 'お問い合わせ', path: '/contact' }
   ]
 
   // ページ遷移時に自動的にトップにスクロール
@@ -807,28 +807,32 @@ function App() {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Waves className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900">全国姉妹漁協推進協議会</h1>
+              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 truncate">全国姉妹漁協推進協議会</h1>
             </div>
             
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-4 lg:space-x-8">
-              {tabs.map((tab) => (
-                <Link
-                  key={tab.id}
-                  to={tab.path}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2 ${
-                    location.pathname === tab.path
-                      ? 'text-blue-600 border-blue-600'
-                      : 'text-gray-600 hover:text-blue-600 border-transparent hover:border-blue-300'
-                  }`}
-                >
-                  {tab.label}
-                </Link>
-              ))}
+            {/* Desktop Navigation - 一時的にデバッグのため表示 */}
+            <nav className="block bg-red-100" role="navigation" aria-label="メインナビゲーション">
+              <ul className="flex space-x-6">
+                {navigationItems.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      to={item.path}
+                      className={`px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2 whitespace-nowrap hover:text-blue-600 ${
+                        location.pathname === item.path
+                          ? 'text-blue-600 border-blue-600'
+                          : 'text-gray-600 border-transparent hover:border-blue-300'
+                      }`}
+                      aria-current={location.pathname === item.path ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </nav>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex-shrink-0">
+            <div className="lg:hidden flex-shrink-0">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
@@ -841,26 +845,30 @@ function App() {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {tabs.map((tab) => (
-                <Link
-                  key={tab.id}
-                  to={tab.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    location.pathname === tab.path
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                >
-                  {tab.label}
-                </Link>
+        <div className={`lg:hidden bg-white border-t transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <nav role="navigation" aria-label="モバイルナビゲーション">
+            <ul className="px-2 pt-2 pb-3 space-y-1">
+              {navigationItems.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    to={item.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                      location.pathname === item.path
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                    }`}
+                    aria-current={location.pathname === item.path ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
               ))}
-            </div>
-          </div>
-        )}
+            </ul>
+          </nav>
+        </div>
       </header>
 
       {/* Main Content */}
