@@ -171,7 +171,7 @@ const HomePage = () => (
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5" />
                   <span>所在地</span>
-                  <span className="text-white">静岡県賀茂郡河津町</span>
+                  <span className="text-white">静岡県賀茂郡河津町谷津河津漁港512-2</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Waves className="w-5 h-5" />
