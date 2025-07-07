@@ -159,7 +159,7 @@ const HomePage = () => (
     <section>
       <Card className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <CardContent className="p-8">
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="mb-12 md:mb-0 flex-1">
               <h3 className="text-2xl font-bold mb-6">会社概要</h3>
               <div className="space-y-4 text-blue-100">
@@ -180,7 +180,7 @@ const HomePage = () => (
                 </div>
               </div>
             </div>
-            <div className="flex-shrink-0 md:ml-12 md:mt-12">
+            <div className="flex-shrink-0 md:ml-12">
               <Link
                 to="/company"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2 shadow-md"
