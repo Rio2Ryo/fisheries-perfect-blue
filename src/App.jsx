@@ -811,13 +811,13 @@ function App() {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:block" role="navigation" aria-label="メインナビゲーション">
+            <nav style={{ display: 'block' }} role="navigation" aria-label="メインナビゲーション">
               <ul className="flex items-center space-x-1">
                 {navigationItems.map((item) => (
                   <li key={item.id}>
                     <Link
                       to={item.path}
-                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                      className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 ${
                         location.pathname === item.path
                           ? 'bg-blue-600 text-white'
                           : 'text-gray-700 hover:bg-gray-100'
@@ -832,7 +832,7 @@ function App() {
             </nav>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex-shrink-0">
+            <div className="sm:hidden flex-shrink-0">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
@@ -845,7 +845,7 @@ function App() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden bg-white border-t transition-all duration-300 ease-in-out ${
+        <div className={`sm:hidden bg-white border-t transition-all duration-300 ease-in-out ${
           mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <nav role="navigation" aria-label="モバイルナビゲーション">
