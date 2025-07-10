@@ -1,8 +1,8 @@
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     // メール送信
     const data = await resend.emails.send({
-      from: 'お問い合わせフォーム <onboarding@resend.dev>',
+      from: 'お問い合わせフォーム <noreply@sfcpc.co.jp>',
       to: ['contact@sfcpc.co.jp'], // 実際の受信メールアドレスに変更してください
       subject: `【お問い合わせ】${subject}`,
       html: `
