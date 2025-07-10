@@ -34,6 +34,10 @@ module.exports = async function handler(req, res) {
     res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('メール送信エラー:', error);
-    res.status(500).json({ error: 'メール送信に失敗しました' });
+    res.status(500).json({ 
+      error: 'メール送信に失敗しました',
+      details: error.message,
+      apiKey: process.env.RESEND_API_KEY ? 'set' : 'not set'
+    });
   }
 }
