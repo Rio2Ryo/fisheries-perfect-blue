@@ -1,13 +1,17 @@
 const { Resend } = require('resend');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
+    // API キーの確認
+    if (!process.env.RESEND_API_KEY) {
+      return res.status(500).json({ error: 'RESEND_API_KEY が設定されていません' });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { name, email, phone, subject, message } = req.body;
 
     // バリデーション
