@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     // メール送信
     const result = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: ['matsuura@purebiokeyz.co.jp'], // テスト用に実在するメールアドレスに変更
+      to: ['contact@sfcpc.co.jp'], // 会社の正式なお問い合わせメールアドレス
       subject: `【お問い合わせ】${subject}`,
       html: `
         <h2>お問い合わせを受信しました</h2>
