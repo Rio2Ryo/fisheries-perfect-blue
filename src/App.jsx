@@ -645,7 +645,61 @@ const CompanyPage = () => (
   </div>
 )
 
-const ContactPage = () => (
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('送信エラー:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
   <div className="space-y-8">
     <div className="text-center">
       <h2 className="text-3xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
@@ -695,7 +749,18 @@ const ContactPage = () => (
 
         <div className="bg-white rounded-xl p-6 shadow-md">
           <h4 className="text-lg font-semibold text-gray-900 mb-4">お問い合わせフォーム</h4>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            {submitStatus === 'success' && (
+              <div className="p-4 bg-green-100 text-green-700 rounded-md mb-4">
+                お問い合わせを送信しました。ありがとうございます。
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-100 text-red-700 rounded-md mb-4">
+                送信に失敗しました。もう一度お試しください。
+              </div>
+            )}
+            
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                 お名前 <span className="text-red-500">*</span>
@@ -704,6 +769,8 @@ const ContactPage = () => (
                 type="text"
                 id="name"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="山田太郎"
@@ -718,6 +785,8 @@ const ContactPage = () => (
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="example@email.com"
@@ -732,6 +801,8 @@ const ContactPage = () => (
                 type="tel"
                 id="phone"
                 name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="090-1234-5678"
               />
@@ -744,6 +815,8 @@ const ContactPage = () => (
               <select
                 id="subject"
                 name="subject"
+                value={formData.subject}
+                onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
@@ -763,6 +836,8 @@ const ContactPage = () => (
                 id="message"
                 name="message"
                 rows={4}
+                value={formData.message}
+                onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="お問い合わせ内容をご記入ください"
@@ -771,16 +846,22 @@ const ContactPage = () => (
             
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+              disabled={isSubmitting}
+              className={`w-full py-2 px-4 rounded-md transition-colors duration-200 font-medium ${
+                isSubmitting 
+                  ? 'bg-gray-400 text-gray-200 cursor-not-allowed' 
+                  : 'bg-blue-600 text-white hover:bg-blue-700'
+              }`}
             >
-              送信する
+              {isSubmitting ? '送信中...' : '送信する'}
             </button>
           </form>
         </div>
       </div>
     </div>
   </div>
-)
+  )
+}
 
 function App() {
   const location = useLocation()
