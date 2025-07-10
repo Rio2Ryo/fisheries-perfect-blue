@@ -29,10 +29,12 @@ export default async function handler(req, res) {
     const { Resend } = await import('resend')
     const resend = new Resend(process.env.RESEND_API_KEY)
 
-    // メール送信
+    console.log('Sending email with data:', { name, email, subject });
+
+    // メール送信（認証済みドメインを使用）
     const result = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: ['contact@sfcpc.co.jp'], // 会社の正式なお問い合わせメールアドレス
+      from: 'noreply@sfcpc.co.jp', // 認証済みドメインを使用
+      to: ['contact@sfcpc.co.jp'],
       subject: `【お問い合わせ】${subject}`,
       html: `
         <h2>お問い合わせを受信しました</h2>
@@ -42,9 +44,15 @@ export default async function handler(req, res) {
         <p><strong>お問い合わせ内容:</strong></p>
         <p>${message}</p>
       `
-    })
+    });
 
-    return res.status(200).json({ success: true, id: result.data?.id })
+    console.log('Resend API response:', result);
+
+    return res.status(200).json({ 
+      success: true, 
+      id: result.data?.id,
+      status: result.error ? 'error' : 'sent'
+    })
 
   } catch (error) {
     console.error('API Error:', error)
