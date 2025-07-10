@@ -46,12 +46,23 @@ export default async function handler(req, res) {
       `
     });
 
-    console.log('Resend API response:', result);
+    console.log('Resend API response:', JSON.stringify(result, null, 2));
+
+    // Resendのエラーチェックを詳細に
+    if (result.error) {
+      console.error('Resend API Error:', result.error);
+      return res.status(500).json({ 
+        success: false, 
+        error: result.error,
+        message: 'Failed to send email via Resend'
+      });
+    }
 
     return res.status(200).json({ 
       success: true, 
       id: result.data?.id,
-      status: result.error ? 'error' : 'sent'
+      status: 'sent',
+      fullResult: result
     })
 
   } catch (error) {
