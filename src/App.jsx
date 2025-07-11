@@ -888,11 +888,13 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
-              <img 
-                src={sfcLogo} 
-                alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                className="h-8 sm:h-10 w-auto flex-shrink-0"
-              />
+              <Link to="/" className="flex items-center">
+                <img 
+                  src={sfcLogo} 
+                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
+                  className="h-10 sm:h-12 w-auto flex-shrink-0"
+                />
+              </Link>
             </div>
             
             {/* Desktop Navigation */}
@@ -976,7 +978,7 @@ function App() {
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-10 w-auto"
+                  className="h-12 w-auto brightness-0 invert"
                 />
               </div>
               <p className="text-gray-300 leading-relaxed">
