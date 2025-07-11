@@ -1,0 +1,38 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="85"/>
+    </clipPath>
+  </defs>
+  
+  <!-- 円形の背景 -->
+  <g>
+    <!-- 外側の円（ダークブルー） -->
+    <circle cx="100" cy="100" r="85" fill="#0B4D8C" />
+    
+    <!-- 波のパターン -->
+    <g clip-path="url(#circleClip)">
+      <!-- 緑の波（上部） -->
+      <path d="M 15 60 Q 50 30, 85 50 T 155 50 T 225 50" 
+            stroke="none" fill="#4CAF50" fill-opacity="0.9" />
+      <path d="M 15 70 Q 50 40, 85 60 T 155 60 T 225 60 L 225 100 L 15 100 Z" 
+            stroke="none" fill="#4CAF50" fill-opacity="0.9" />
+      
+      <!-- 青の波（下部） -->
+      <path d="M 15 120 Q 50 90, 85 110 T 155 110 T 225 110" 
+            stroke="none" fill="#1976D2" fill-opacity="0.8" />
+      <path d="M 15 130 Q 50 100, 85 120 T 155 120 T 225 120 L 225 185 L 15 185 Z" 
+            stroke="none" fill="#1976D2" fill-opacity="0.8" />
+      
+      <!-- 白い波のアクセント -->
+      <ellipse cx="100" cy="85" rx="40" ry="15" fill="white" fill-opacity="0.3" />
+    </g>
+  </g>
+  
+  <!-- SFC テキスト -->
+  <text x="220" y="120" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold" fill="#0B4D8C">SFC</text>
+  
+  <!-- サブタイトル -->
+  <text x="450" y="70" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#0B4D8C">Sisters Fisheries Cooperative</text>
+  <text x="450" y="100" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#0B4D8C">Promotion Council</text>
+</svg>
