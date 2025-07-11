@@ -3,6 +3,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Building2, Waves, Ship, Truck, Leaf, MapPin, Phone, Mail, ArrowRight, ChevronRight, Factory, Users, Target, Menu, X } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import heroBg from './assets/hero-bg.jpg'
+import sfcLogo from './assets/sfc-logo.svg'
 import './App.css'
 
 // ページコンポーネント
@@ -887,10 +888,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Waves className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 truncate">全国姉妹漁協推進協議会株式会社</h1>
+              <img 
+                src={sfcLogo} 
+                alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
+                className="h-8 sm:h-10 w-auto flex-shrink-0"
+              />
             </div>
             
             {/* Desktop Navigation */}
@@ -971,10 +973,11 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Waves className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold">全国姉妹漁協推進協議会株式会社</h3>
+                <img 
+                  src={sfcLogo} 
+                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
+                  className="h-10 w-auto"
+                />
               </div>
               <p className="text-gray-300 leading-relaxed">
                 海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。

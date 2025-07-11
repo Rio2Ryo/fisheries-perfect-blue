@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1024 768" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1024" height="768" fill="#f8f9fa"/>
+  
+  <!-- メインロゴ部分 -->
+  <g transform="translate(120, 180)">
+    <!-- 円形のロゴマーク -->
+    <circle cx="180" cy="180" r="150" fill="#1e3a5f" stroke="none"/>
+    
+    <!-- 内側の波のようなデザイン -->
+    <g transform="translate(180, 180)">
+      <!-- 緑の波形 -->
+      <path d="M -120 -40 Q -60 -80 0 -40 Q 60 0 120 -40 L 120 40 Q 60 80 0 40 Q -60 0 -120 40 Z" 
+            fill="#4ade80" opacity="0.9"/>
+      
+      <!-- 青の波形 -->
+      <path d="M -100 20 Q -50 -20 0 20 Q 50 60 100 20 L 100 80 Q 50 120 0 80 Q -50 40 -100 80 Z" 
+            fill="#1e3a5f" opacity="0.8"/>
+      
+      <!-- 白の波形アクセント -->
+      <path d="M -80 -20 Q -40 -60 0 -20 Q 40 20 80 -20 L 80 20 Q 40 60 0 20 Q -40 -20 -80 20 Z" 
+            fill="white" opacity="0.6"/>
+    </g>
+    
+    <!-- SFC テキスト -->
+    <text x="420" y="120" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#1e3a5f">SFC</text>
+    
+    <!-- サブタイトル -->
+    <text x="420" y="180" font-family="Arial, sans-serif" font-size="28" fill="#1e3a5f">Sisters Fisheries Cooperative</text>
+    <text x="420" y="220" font-family="Arial, sans-serif" font-size="28" fill="#1e3a5f">Promotion Council</text>
+  </g>
+</svg>
