@@ -898,7 +898,7 @@ function App() {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex flex-1 justify-end" role="navigation" aria-label="メインナビゲーション">
+            <nav className="hidden md:flex flex-1 justify-end items-center" role="navigation" aria-label="メインナビゲーション">
               <ul className="flex items-center space-x-1">
                 {navigationItems.map((item) => (
                   <li key={item.id}>
