@@ -1021,7 +1021,7 @@ function App() {
 
           <div className="border-t border-gray-800 mt-8 pt-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-              <div className="flex space-x-6 mb-4 md:mb-0">
+              <div className="flex space-x-6 mb-4 md:mb-0 hidden md:flex">
                 <Link 
                   to="/marine"
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
