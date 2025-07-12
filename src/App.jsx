@@ -886,13 +886,13 @@ function App() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
-          <div className="flex items-center justify-between h-18 sm:h-22 md:h-24">
+          <div className="flex items-center justify-between h-16 sm:h-20 md:h-24">
             <div className="flex items-center flex-shrink-0">
               <Link to="/" className="block">
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-16 sm:h-20 md:h-22 lg:h-24 w-auto"
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
                 />
               </Link>
             </div>
