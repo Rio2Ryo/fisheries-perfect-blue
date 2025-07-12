@@ -1,0 +1,48 @@
+<svg width="1024" height="768" viewBox="0 0 1024 768" xmlns="http://www.w3.org/2000/svg">
+  <!-- 円形の背景 -->
+  <g transform="translate(120, 184)">
+    <!-- 外側の濃い青の円 -->
+    <circle cx="130" cy="130" r="130" fill="#1E3A5F"/>
+    
+    <!-- 内側のデザイン -->
+    <g transform="translate(130, 130)">
+      <!-- 緑の流れるような形（上部左） -->
+      <path d="M -65 -85 C -25 -105, 15 -95, 45 -65 C 75 -35, 70 5, 45 35 C 20 65, -20 70, -50 45 C -80 20, -85 -15, -75 -45 C -70 -65, -65 -85, -65 -85 Z" 
+            fill="#4CAF50"/>
+      
+      <!-- 濃い青の流れるような形（下部右） -->
+      <path d="M 65 85 C 25 105, -15 95, -45 65 C -75 35, -70 -5, -45 -35 C -20 -65, 20 -70, 50 -45 C 80 -20, 85 15, 75 45 C 70 65, 65 85, 65 85 Z" 
+            fill="#1E3A5F"/>
+      
+      <!-- 白い曲線（アクセント）上部 -->
+      <path d="M -75 -35 C -45 -55, -15 -55, 15 -50 C 35 -45, 45 -35, 40 -25 C 25 -15, 5 -15, -25 -25 C -45 -35, -55 -45, -75 -35 Z" 
+            fill="white" opacity="0.8"/>
+      
+      <!-- 白い曲線（アクセント）下部 -->
+      <path d="M 75 35 C 45 55, 15 55, -15 50 C -35 45, -45 35, -40 25 C -25 15, -5 15, 25 25 C 45 35, 55 45, 75 35 Z" 
+            fill="white" opacity="0.8"/>
+      
+      <!-- 外側の青い流線的な部分 -->
+      <!-- 上部の流線 -->
+      <path d="M -95 -75 C -65 -95, -25 -85, 15 -65 C 25 -55, 15 -45, 0 -35 L -110 -50 Z" 
+            fill="#1E3A5F"/>
+      
+      <!-- 左下の流線 -->
+      <path d="M -110 45 C -85 15, -55 -5, -25 15 C -15 25, -25 35, -45 45 L -125 55 Z" 
+            fill="#1E3A5F"/>
+      
+      <!-- 右下の流線 -->
+      <path d="M 110 45 C 85 15, 55 -5, 25 15 C 15 25, 25 35, 45 45 L 125 55 Z" 
+            fill="#1E3A5F"/>
+    </g>
+  </g>
+  
+  <!-- SFC テキスト -->
+  <text x="380" y="400" font-family="Arial, sans-serif" font-size="240" font-weight="bold" fill="#1E3A5F">SFC</text>
+  
+  <!-- サブタイトル -->
+  <g transform="translate(380, 460)">
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="48" fill="#1E3A5F">Sisters Fisheries Cooperative</text>
+    <text x="0" y="90" font-family="Arial, sans-serif" font-size="48" fill="#1E3A5F">Promotion Council</text>
+  </g>
+</svg>
