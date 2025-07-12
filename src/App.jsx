@@ -892,7 +892,7 @@ function App() {
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-16 sm:h-18 w-auto"
+                  className="h-20 sm:h-24 w-auto"
                 />
               </Link>
             </div>
