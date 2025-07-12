@@ -3,7 +3,6 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Building2, Waves, Ship, Truck, Leaf, MapPin, Phone, Mail, ArrowRight, ChevronRight, Factory, Users, Target, Menu, X } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import heroBg from './assets/hero-bg.jpg'
-import sfcLogo from './assets/sfc-logo-original.png'
 import './App.css'
 
 // ページコンポーネント
@@ -888,12 +887,14 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
-              <Link to="/" className="flex items-center">
-                <img 
-                  src={sfcLogo} 
-                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-10 sm:h-12 w-auto flex-shrink-0"
-                />
+              <Link to="/" className="flex items-center space-x-2">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xs sm:text-sm">SFC</span>
+                </div>
+                <div className="hidden sm:block">
+                  <h1 className="text-lg font-bold text-gray-900">Sisters Fisheries Cooperative</h1>
+                  <p className="text-sm text-gray-600">Promotion Council</p>
+                </div>
               </Link>
             </div>
             
@@ -975,11 +976,13 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src={sfcLogo} 
-                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-12 w-auto brightness-0 invert"
-                />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold">SFC</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Sisters Fisheries Cooperative</h3>
+                  <p className="text-gray-300">Promotion Council</p>
+                </div>
               </div>
               <p className="text-gray-300 leading-relaxed">
                 海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。
