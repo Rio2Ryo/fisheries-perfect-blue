@@ -898,25 +898,27 @@ function App() {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex flex-1 justify-end items-center" role="navigation" aria-label="メインナビゲーション">
-              <ul className="flex items-center space-x-1">
-                {navigationItems.map((item) => (
-                  <li key={item.id}>
-                    <Link
-                      to={item.path}
-                      className={`px-3 lg:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                        location.pathname === item.path
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-700 hover:bg-gray-100'
-                      }`}
-                      aria-current={location.pathname === item.path ? 'page' : undefined}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div className="hidden md:flex flex-1 justify-end items-center">
+              <nav role="navigation" aria-label="メインナビゲーション">
+                <ul className="flex items-center space-x-2">
+                  {navigationItems.map((item) => (
+                    <li key={item.id}>
+                      <Link
+                        to={item.path}
+                        className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                          location.pathname === item.path
+                            ? 'bg-blue-600 text-white'
+                            : 'text-gray-700 hover:bg-gray-100'
+                        }`}
+                        aria-current={location.pathname === item.path ? 'page' : undefined}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden flex-shrink-0">
