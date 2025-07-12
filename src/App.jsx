@@ -886,13 +886,13 @@ function App() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20 sm:h-24">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
               <Link to="/" className="flex items-center">
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-10 sm:h-12 w-auto flex-shrink-0"
+                  className="h-16 sm:h-20 w-auto flex-shrink-0"
                 />
               </Link>
             </div>
@@ -978,7 +978,7 @@ function App() {
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-12 w-auto brightness-0 invert"
+                  className="h-16 w-auto brightness-0 invert"
                 />
               </div>
               <p className="text-gray-300 leading-relaxed">
