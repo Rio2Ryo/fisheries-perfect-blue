@@ -885,26 +885,26 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-          <div className="flex items-center justify-between h-18 sm:h-20">
-            <div className="flex items-center">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+          <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
+            <div className="flex items-center flex-shrink-0">
               <Link to="/" className="block">
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-20 sm:h-24 w-auto"
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
                 />
               </Link>
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="flex-1 flex justify-end" role="navigation" aria-label="メインナビゲーション">
+            <nav className="hidden md:flex flex-1 justify-end" role="navigation" aria-label="メインナビゲーション">
               <ul className="flex items-center space-x-1">
                 {navigationItems.map((item) => (
                   <li key={item.id}>
                     <Link
                       to={item.path}
-                      className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all duration-200 ${
+                      className={`px-3 lg:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                         location.pathname === item.path
                           ? 'bg-blue-600 text-white'
                           : 'text-gray-700 hover:bg-gray-100'
@@ -919,20 +919,20 @@ function App() {
             </nav>
 
             {/* Mobile menu button */}
-            <div className="sm:hidden flex-shrink-0">
+            <div className="md:hidden flex-shrink-0">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
                 aria-label="メニューを開く"
               >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`sm:hidden bg-white border-t transition-all duration-300 ease-in-out ${
+        <div className={`md:hidden bg-white border-t transition-all duration-300 ease-in-out ${
           mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <nav role="navigation" aria-label="モバイルナビゲーション">
