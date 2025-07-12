@@ -1,31 +1,44 @@
-<svg width="850" height="250" viewBox="0 0 850 250" xmlns="http://www.w3.org/2000/svg">
-  <!-- 円形のロゴマーク -->
-  <g transform="translate(50, 50)">
-    <!-- 外側の円 -->
-    <circle cx="75" cy="75" r="75" fill="#1e3a5f"/>
+<svg width="780" height="200" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 円形の背景 -->
+  <g transform="translate(20, 20)">
+    <!-- 外側の円（濃い青） -->
+    <circle cx="80" cy="80" r="80" fill="#1E3A5F"/>
     
-    <!-- 内側の波模様 -->
-    <g>
-      <!-- 緑の葉っぱのような形 -->
-      <path d="M 75 20 C 100 20, 120 35, 120 60 C 120 85, 100 100, 75 100 C 50 100, 30 85, 30 60 C 30 45, 40 30, 55 25 C 65 20, 75 20, 75 20" 
-            fill="#4ade80" opacity="0.9"/>
+    <!-- 内側のデザイン -->
+    <g transform="translate(80, 80)">
+      <!-- 緑の滴のような形（左上） -->
+      <path d="M -35 -50 C -15 -60, 5 -55, 20 -35 C 35 -15, 30 10, 15 25 C 0 40, -20 35, -35 20 C -50 5, -45 -20, -35 -35 Z" 
+            fill="#4CAF50"/>
       
-      <!-- 青の波形（下部） -->
-      <path d="M 20 75 C 30 60, 45 55, 60 60 C 75 65, 85 70, 95 75 C 105 80, 115 85, 125 95 C 130 100, 130 110, 125 115 C 115 125, 100 130, 75 130 C 50 130, 35 125, 25 115 C 15 105, 15 90, 20 75" 
-            fill="#1e3a5f" opacity="0.8"/>
+      <!-- 青の波形（右下） -->
+      <path d="M 35 50 C 15 60, -5 55, -20 35 C -35 15, -30 -10, -15 -25 C 0 -40, 20 -35, 35 -20 C 50 -5, 45 20, 35 35 Z" 
+            fill="#1E3A5F"/>
       
-      <!-- 内側の白い波形 -->
-      <path d="M 45 70 C 55 65, 65 65, 75 70 C 85 75, 90 80, 90 85 C 90 90, 85 95, 75 95 C 65 95, 60 90, 60 85 C 60 80, 55 75, 45 70" 
-            fill="white" opacity="0.5"/>
+      <!-- 白い曲線（アクセント） -->
+      <path d="M -30 -20 C -10 -30, 10 -30, 30 -20 C 35 -15, 35 -10, 30 -5 C 10 5, -10 5, -30 -5 C -35 -10, -35 -15, -30 -20 Z" 
+            fill="white" opacity="0.7"/>
+      <path d="M -30 20 C -10 10, 10 10, 30 20 C 35 25, 35 30, 30 35 C 10 45, -10 45, -30 35 C -35 30, -35 25, -30 20 Z" 
+            fill="white" opacity="0.7"/>
+      
+      <!-- 外側の青い翼のような部分 -->
+      <!-- 上の翼 -->
+      <path d="M -50 -60 C -30 -70, -10 -65, 10 -50 C 20 -40, 15 -25, 0 -15 L 0 -80 Z" 
+            fill="#1E3A5F"/>
+      <!-- 左下の翼 -->
+      <path d="M -70 30 C -60 10, -45 -5, -25 5 C -15 15, -20 30, -35 40 L -80 40 Z" 
+            fill="#1E3A5F"/>
+      <!-- 右下の翼 -->
+      <path d="M 70 30 C 60 10, 45 -5, 25 5 C 15 15, 20 30, 35 40 L 80 40 Z" 
+            fill="#1E3A5F"/>
     </g>
   </g>
   
   <!-- SFC テキスト -->
-  <text x="250" y="145" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#1e3a5f">SFC</text>
+  <text x="220" y="140" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#1E3A5F">SFC</text>
   
   <!-- サブタイトル -->
-  <g transform="translate(250, 180)">
-    <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" fill="#1e3a5f">Sisters Fisheries Cooperative</text>
-    <text x="0" y="40" font-family="Arial, sans-serif" font-size="32" fill="#1e3a5f">Promotion Council</text>
+  <g transform="translate(220, 165)">
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="24" fill="#1E3A5F">Sisters Fisheries Cooperative</text>
+    <text x="0" y="38" font-family="Arial, sans-serif" font-size="24" fill="#1E3A5F">Promotion Council</text>
   </g>
 </svg>
