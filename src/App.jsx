@@ -885,14 +885,14 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 sm:h-24">
-            <div className="flex items-center min-w-0">
-              <Link to="/" className="flex items-center mr-8 sm:mr-12">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+          <div className="flex items-center justify-between h-24 sm:h-28">
+            <div className="flex items-center">
+              <Link to="/" className="block">
                 <img 
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-12 sm:h-16 w-auto max-w-[300px] flex-shrink-0"
+                  className="h-20 sm:h-24 w-auto"
                 />
               </Link>
             </div>
