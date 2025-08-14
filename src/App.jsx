@@ -564,15 +564,11 @@ const CompanyPage = () => (
               <div>
                 <dt className="font-semibold text-gray-900">会社名</dt>
                 <dd className="text-gray-700">全国姉妹漁協推進協議会株式会社</dd>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Building2 className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
                 <dt className="font-semibold text-gray-900">English Name</dt>
                 <dd className="text-gray-700">National Sister Fisheries Promotion Council Co., Ltd.</dd>
               </div>
             </div>
+            
             <div className="flex items-start space-x-3">
               <Users className="w-5 h-5 text-blue-600 mt-1" />
               <div>
