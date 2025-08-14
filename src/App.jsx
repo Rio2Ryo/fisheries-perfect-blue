@@ -168,6 +168,8 @@ const HomePage = () => (
                   <Building2 className="w-5 h-5" />
                   <span>会社名</span>
                   <span className="text-white">全国姉妹漁協推進協議会株式会社</span>
+                </div>
+                <div className="flex items-center space-x-3">
                   <span>English Name</span>
                   <span className="text-white">National Sister Fisheries Promotion Council Co., Ltd.</span>
                 </div>
