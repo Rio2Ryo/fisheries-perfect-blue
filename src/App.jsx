@@ -168,11 +168,15 @@ const HomePage = () => (
                   <Building2 className="w-5 h-5" />
                   <span>会社名</span>
                   <span className="text-white">全国姉妹漁協推進協議会株式会社</span>
+                  <span>English Name</span>
+                  <span className="text-white">National Sister Fisheries Promotion Council Co., Ltd.</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5" />
                   <span>所在地</span>
                   <span className="text-white">静岡県賀茂郡河津町谷津河津漁港512-2</span>
+                  <span>English Address</span>
+                  <span className="text-white">512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Waves className="w-5 h-5" />
@@ -565,8 +569,8 @@ const CompanyPage = () => (
             <div className="flex items-start space-x-3">
               <Building2 className="w-5 h-5 text-blue-600 mt-1" />
               <div>
-                <dt className="font-semibold text-gray-900">英語名</dt>
-                <dd className="text-gray-700">Sisters Fisheries Cooperative Promotion Council</dd>
+                <dt className="font-semibold text-gray-900">English Name</dt>
+                <dd className="text-gray-700">National Sister Fisheries Promotion Council Co., Ltd.</dd>
               </div>
             </div>
             <div className="flex items-start space-x-3">
@@ -574,6 +578,8 @@ const CompanyPage = () => (
               <div>
                 <dt className="font-semibold text-gray-900">代表</dt>
                 <dd className="text-gray-700">渡邊昌宏</dd>
+                <dt className="font-semibold text-gray-900">International Director</dt>
+                <dd className="text-gray-700">Michael Choong Liat Lee</dd>
               </div>
             </div>
             <div className="flex items-start space-x-3">
@@ -581,6 +587,8 @@ const CompanyPage = () => (
               <div>
                 <dt className="font-semibold text-gray-900">住所</dt>
                 <dd className="text-gray-700">〒413-0515　静岡県賀茂郡河津町谷津河津漁港512-2</dd>
+                <dt className="font-semibold text-gray-900">English Address</dt>
+                <dd className="text-gray-700">512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan</dd>
               </div>
             </div>
             <div className="flex items-start space-x-3">
