@@ -177,6 +177,8 @@ const HomePage = () => (
                   <MapPin className="w-5 h-5" />
                   <span>所在地</span>
                   <span className="text-white">静岡県賀茂郡河津町谷津河津漁港512-2</span>
+                </div>
+                <div className="flex items-center space-x-3">
                   <span>English Address</span>
                   <span className="text-white">512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan</span>
                 </div>
