@@ -170,6 +170,7 @@ const HomePage = () => (
                   <span className="text-white">全国姉妹漁協推進協議会株式会社</span>
                 </div>
                 <div className="flex items-center space-x-3">
+                  <Building2 className="w-5 h-5 invisible" />
                   <span>English Name</span>
                   <span className="text-white">National Sister Fisheries Promotion Council Co., Ltd.</span>
                 </div>
@@ -179,6 +180,7 @@ const HomePage = () => (
                   <span className="text-white">静岡県賀茂郡河津町谷津河津漁港512-2</span>
                 </div>
                 <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 invisible" />
                   <span>English Address</span>
                   <span className="text-white">512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan</span>
                 </div>
