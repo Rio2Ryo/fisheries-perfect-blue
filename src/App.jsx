@@ -22,7 +22,7 @@ const HomePage = () => (
           REBONE THE SEA
         </h2>
         <p className="text-xl text-blue-100 mb-8">
-          これからの新しい海づくり
+          {t('hero.subtitle')}
         </p>
         <p className="text-lg text-blue-50 max-w-4xl mx-auto mb-12 leading-relaxed">
           海業推進を基軸とし、漁業の枠を超えた多角的な事業展開で日本の沿岸地域の活性化に貢献しています。
