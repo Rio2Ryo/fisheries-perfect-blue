@@ -28,14 +28,13 @@ const HomePage = () => {
           {t('hero.subtitle')}
         </p>
         <p className="text-lg text-blue-50 max-w-4xl mx-auto mb-12 leading-relaxed">
-          海業推進を基軸とし、漁業の枠を超えた多角的な事業展開で日本の沿岸地域の活性化に貢献しています。
-          独自の技術と全国の漁業組合との連携により、持続可能な海洋資源の活用を実現します。
-        </p>
+           {t('hero.description')}
+          </p>
         <Link
           to="/contact"
           className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg"
         >
-          <span>お問い合わせはこちら</span>
+           <span>{t('hero.cta')}</span>
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>
