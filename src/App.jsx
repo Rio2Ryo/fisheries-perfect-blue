@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import LanguageToggle from './components/LanguageToggle.jsx'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Building2, Waves, Ship, Truck, Leaf, MapPin, Phone, Mail, ArrowRight, ChevronRight, Factory, Users, Target, Menu, X } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
@@ -877,6 +879,7 @@ const ContactPage = () => {
 function App() {
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { t } = useTranslation()
 
   const navigationItems = [
     { id: 'home', label: 'ホーム', path: '/' },
@@ -922,12 +925,13 @@ function App() {
                         }`}
                         aria-current={location.pathname === item.path ? 'page' : undefined}
                       >
-                        {item.label}
+                        {t(`nav.${item.id}`)}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </nav>
+              <LanguageToggle className="ml-4" />
             </div>
 
             {/* Mobile menu button */}
@@ -961,10 +965,13 @@ function App() {
                     }`}
                     aria-current={location.pathname === item.path ? 'page' : undefined}
                   >
-                    {item.label}
+                    {t(`nav.${item.id}`)}
                   </Link>
                 </li>
               ))}
+              <li>
+                <LanguageToggle className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50" />
+              </li>
             </ul>
           </nav>
         </div>

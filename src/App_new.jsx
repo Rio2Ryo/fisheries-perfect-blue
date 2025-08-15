@@ -4,6 +4,8 @@ import { Building2, Waves, Ship, Truck, Leaf, MapPin, Phone, Mail, ArrowRight, C
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import heroBg from './assets/hero-bg.jpg'
 import './App.css'
+import { useTranslation } from 'react-i18next'
+import LanguageToggle from './components/LanguageToggle.jsx'
 
 // ページコンポーネント
 const HomePage = () => (
@@ -330,6 +332,7 @@ const ContactPage = () => (
 function App() {
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { t } = useTranslation()
 
   const tabs = [
     { id: '/', label: 'ホーム', path: '/' },
@@ -368,10 +371,11 @@ function App() {
                       : 'text-gray-600 hover:text-blue-600 border-transparent hover:border-blue-300'
                   }`}
                 >
-                  {tab.label}
+                  {t(`nav.${tab.id.slice(1) || 'home'}`)}
                 </Link>
               ))}
             </nav>
+            <LanguageToggle className="ml-4 hidden md:block" />
 
             {/* Mobile menu button */}
             <div className="md:hidden flex-shrink-0">
@@ -401,18 +405,6 @@ function App() {
                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     location.pathname === tab.path
                       ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                >
-                  {tab.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </header>
-
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Routes>
           <Route path="/" element={<HomePage />} />

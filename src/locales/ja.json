@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "marine": "海業",
+    "seaweed": "藻の養殖",
+    "company": "会社概要",
+    "contact": "お問い合わせ"
+  },
+  "lang": {
+    "en": "EN",
+    "ja": "JA"
+  }
+}

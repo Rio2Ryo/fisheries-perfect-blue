@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Home",
+    "marine": "Marine",
+    "seaweed": "Seaweed",
+    "company": "Company",
+    "contact": "Contact"
+  },
+  "lang": {
+    "en": "EN",
+    "ja": "JA"
+  }
+}
