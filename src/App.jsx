@@ -9,7 +9,9 @@ import sfcLogo from './assets/sfc-logo-new.svg'
 import './App.css'
 
 // ページコンポーネント
-const HomePage = () => (
+const HomePage = () => {
+  const { t } = useTranslation();
+  return (
   <div className="space-y-16">
     {/* Hero Section */}
     <section 
@@ -22,7 +24,7 @@ const HomePage = () => (
           REBONE THE SEA
         </h2>
         <p className="text-xl text-blue-100 mb-8">
-          これからの新しい海づくり
+          {t('hero.subtitle')}
         </p>
         <p className="text-lg text-blue-50 max-w-4xl mx-auto mb-12 leading-relaxed">
           海業推進を基軸とし、漁業の枠を超えた多角的な事業展開で日本の沿岸地域の活性化に貢献しています。
@@ -32,7 +34,7 @@ const HomePage = () => (
           to="/contact"
           className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg"
         >
-          <span>お問い合わせはこちら</span>
+          <span>{t('hero.cta')}</span>
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>
