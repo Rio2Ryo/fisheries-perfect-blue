@@ -6,6 +6,10 @@
     "company": "会社概要",
     "contact": "お問い合わせ"
   },
+  "hero": {
+    "subtitle": "これからの新しい海づくり",
+    "cta": "お問い合わせはこちら"
+  },
   "lang": {
     "en": "EN",
     "ja": "JA"

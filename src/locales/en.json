@@ -6,6 +6,10 @@
     "company": "Company",
     "contact": "Contact"
   },
+  "hero": {
+    "subtitle": "Creating a New Sea for the Future",
+    "cta": "Contact Us"
+  },
   "lang": {
     "en": "EN",
     "ja": "JA"

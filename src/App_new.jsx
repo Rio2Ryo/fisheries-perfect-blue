@@ -8,32 +8,30 @@ import { useTranslation } from 'react-i18next'
 import LanguageToggle from './components/LanguageToggle.jsx'
 
 // ページコンポーネント
-const HomePage = () => (
-  <div className="space-y-16">
-    {/* Hero Section */}
-    <section 
-      className="relative rounded-2xl overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBg})` }}
-    >
-      <div className="absolute inset-0 bg-blue-900/60"></div>
-      <div className="relative px-8 py-16 sm:px-16 sm:py-24 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-          REBONE THE SEA
-        </h2>
-        <p className="text-xl text-blue-100 mb-8">
-          これからの新しい海づくり
-        </p>
-        <p className="text-lg text-blue-50 max-w-4xl mx-auto mb-12 leading-relaxed">
-          海業推進を基軸とし、漁業の枠を超えた多角的な事業展開で日本の沿岸地域の活性化に貢献しています。
-          独自の技術と全国の漁業組合との連携により、持続可能な海洋資源の活用を実現します。
-        </p>
-        <Link
-          to="/contact"
-          className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg"
-        >
-          <span>お問い合わせはこちら</span>
-          <ArrowRight className="w-5 h-5" />
-        </Link>
+const HomePage = () => {
+  const { t } = useTranslation();
+  return (
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section 
+        className="relative rounded-2xl overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        <div className="absolute inset-0 bg-blue-900/60"></div>
+        <div className="relative px-8 py-16 sm:px-16 sm:py-24 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            REBONE THE SEA
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            {t('hero.subtitle')}
+          </p>
+          <Link
+            to="/contact"
+            className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg"
+          >
+            <span>{t('hero.cta')}</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
       </div>
     </section>
 
