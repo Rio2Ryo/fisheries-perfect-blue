@@ -40,48 +40,52 @@ const HomePage = () => {
       </div>
     </section>
 
-    {/* Business Overview */}
-    <section>
-      <div className="text-center mb-12">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">事業概要</h3>
-      </div>
+   {/* Business Overview */}
+<section>
+  <div className="text-center mb-12">
+    <h3 className="text-3xl font-bold text-gray-900 mb-4">
+      {t('business.title')}
+    </h3>
+  </div>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {/* Marine Business */}
-        <Card className="group hover:shadow-xl transition-all duration-300 border border-blue-200 bg-white">
-          <CardHeader className="pb-4">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-              <Waves className="w-6 h-6 text-white" />
-            </div>
-            <CardTitle className="text-xl text-gray-900">海業</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-gray-700 leading-relaxed">
-              漁業の枠を超えた多角的な事業展開。体験型観光漁業、移動式ホテル・RVパーク運営、JTB総研との業務提携による革新的な海洋ツーリズムを展開。
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <span>体験型観光漁業</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <span>移動式ホテル・RVパーク</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <span>JTB総研との業務提携</span>
-              </div>
-            </div>
-            <Link
-              to="/marine"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
-            >
-              <span>詳細を見る</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </CardContent>
-        </Card>
+  <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    {/* Marine Business */}
+    <Card className="group hover:shadow-xl transition-all duration-300 border border-blue-200 bg-white">
+      <CardHeader className="pb-4">
+        <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+          <Waves className="w-6 h-6 text-white" />
+        </div>
+        <CardTitle className="text-xl text-gray-900">
+          {t('business.marine.title')}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <p className="text-gray-700 leading-relaxed">
+          {t('business.marine.description')}
+        </p>
+        <div className="space-y-2">
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+            <span>{t('business.marine.items.tourism')}</span>
+          </div>
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+            <span>{t('business.marine.items.rv')}</span>
+          </div>
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+            <span>{t('business.marine.items.jtb')}</span>
+          </div>
+        </div>
+        <Link
+          to="/marine"
+          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
+        >
+          <span>{t('business.marine.cta')}</span>
+          <ChevronRight className="w-4 h-4" />
+        </Link>
+      </CardContent>
+    </Card>
 
         {/* Seaweed Cultivation */}
         <Card className="group hover:shadow-xl transition-all duration-300 border border-green-200 bg-white">

@@ -14,5 +14,18 @@
   "lang": {
     "en": "EN",
     "ja": "JA"
+  },
+  "business": {
+    "title": "Business Overview",
+    "marine": {
+      "title": "Marine Business",
+      "description": "Diversified business development beyond the framework of fisheries. Developing innovative marine tourism through experiential fishing tourism, mobile hotels/RV parks, and partnerships with JTB Research.",
+      "items": {
+        "tourism": "Experiential Fishing Tourism",
+        "rv": "Mobile Hotels / RV Parks",
+        "jtb": "Partnership with JTB Research"
+      },
+      "cta": "Learn More"
+    }
   }
 }
