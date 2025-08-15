@@ -27,5 +27,14 @@
       },
       "cta": "Learn More"
     }
-  }
+  }, "seaweed": {
+      "title": "Seaweed Cultivation",
+      "description": "\"The Earth's First Plant\" — innovative cultivation technology by Mother Vegetables and MV Factory. With next-generation modules that grow 30 times faster, expanding into food, beauty, environment, and industry fields.",
+      "items": {
+        "mother": "Mother Vegetables (2,000 types)",
+        "factory": "MV Factory (International Patent)",
+        "approval": "Approved by Fisheries Agency / International Collaboration"
+      },
+      "cta": "Learn More"
+    }
 }

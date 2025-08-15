@@ -88,40 +88,42 @@ const HomePage = () => {
     </Card>
 
         {/* Seaweed Cultivation */}
-        <Card className="group hover:shadow-xl transition-all duration-300 border border-green-200 bg-white">
-          <CardHeader className="pb-4">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-              <Leaf className="w-6 h-6 text-white" />
-            </div>
-            <CardTitle className="text-xl text-gray-900">藻の養殖</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-gray-700 leading-relaxed">
-              "地球のはじまりの植物"マザーベジタブルとMVファクトリーによる革新的な養殖技術。30倍の速度で成長する次世代モジュールで、食・美容・環境・工業分野に展開。
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>マザーベジタブル（2,000種類）</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>MVファクトリー（国際特許）</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>水産庁承認・国際連携</span>
-              </div>
-            </div>
-            <Link
-              to="/seaweed"
-              className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
-            >
-              <span>詳細を見る</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </CardContent>
-        </Card>
+<Card className="group hover:shadow-xl transition-all duration-300 border border-green-200 bg-white">
+  <CardHeader className="pb-4">
+    <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+      <Leaf className="w-6 h-6 text-white" />
+    </div>
+    <CardTitle className="text-xl text-gray-900">
+      {t('business.seaweed.title')}
+    </CardTitle>
+  </CardHeader>
+  <CardContent className="space-y-4">
+    <p className="text-gray-700 leading-relaxed">
+      {t('business.seaweed.description')}
+    </p>
+    <div className="space-y-2">
+      <div className="flex items-center space-x-2 text-sm text-gray-600">
+        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+        <span>{t('business.seaweed.items.mother')}</span>
+      </div>
+      <div className="flex items-center space-x-2 text-sm text-gray-600">
+        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+        <span>{t('business.seaweed.items.factory')}</span>
+      </div>
+      <div className="flex items-center space-x-2 text-sm text-gray-600">
+        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+        <span>{t('business.seaweed.items.approval')}</span>
+      </div>
+    </div>
+    <Link
+      to="/seaweed"
+      className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
+    >
+      <span>{t('business.seaweed.cta')}</span>
+      <ChevronRight className="w-4 h-4" />
+    </Link>
+  </CardContent>
+</Card>
       </div>
     </section>
 
