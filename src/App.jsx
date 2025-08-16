@@ -226,144 +226,165 @@ const HomePage = () => {
 }
 
 // 他のページコンポーネントは簡易版として作成
-const MarinePage = () => (
-  <div className="space-y-8">
-    <div className="text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">海業</h2>
-      <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        漁業の枠を超えた多角的な事業展開とRVを活用した新しい海洋ツーリズム
-      </p>
-    </div>
+// ここから置換
+const MarinePage = () => {
+  const { t } = useTranslation();
 
-    {/* 海業事業 */}
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-      <div className="flex items-center space-x-4 mb-6">
-        <Waves className="w-8 h-8 text-blue-600" />
-        <h3 className="text-2xl font-bold text-blue-900">海業事業</h3>
-      </div>
-      
-      <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-        漁業の枠を超えた多角的な事業展開を行っています。漁港での体験型観光漁業、地域の漁師との交流、獲れたての海産物をその場で実食など、海業と連携した環境教育プログラムを実施。
-      </p>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Ship className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-blue-900 mb-3">体験型観光漁業</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              漁港を活用した観光体験プログラムの企画・運営
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Building2 className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-blue-900 mb-3">地域漁師との交流</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              地域の漁師との連携による文化交流プログラム
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Leaf className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-blue-900 mb-3">環境教育プログラム</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              海洋環境保全に関する教育・営業活動
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-
-    {/* RV事業 */}
-    <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8">
-      <div className="flex items-center space-x-4 mb-6">
-        <Truck className="w-8 h-8 text-blue-700" />
-        <h3 className="text-2xl font-bold text-blue-900">RV事業</h3>
-      </div>
-      
-      <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-        移動式ホテルとして機能し、海業を活用した独自の飲食や体験プログラムを展開。夜間移動による効率的な旅行を実現し、漁港をRVパークとして活用することで、ユニークな滞在体験を提供。
-      </p>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6">
-            <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
-              <Building2 className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-blue-900 mb-3">移動式ホテル</h4>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              高品質な宿泊体験を提供する移動式ホテルサービス
-            </p>
-            <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
-              宿泊事業
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6">
-            <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
-              <MapPin className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-blue-900 mb-3">RVパーク運営</h4>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              漁港を活用したRVパークの運営・管理
-            </p>
-            <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
-              施設運営
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6">
-            <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
-              <Waves className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-blue-900 mb-3">災害時対応</h4>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              災害時の緊急避難施設としての機能提供
-            </p>
-            <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
-              社会貢献
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-
-    {/* JTB総研との連携 */}
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
-      <div className="flex items-center space-x-4 mb-6">
-        <Target className="w-8 h-8 text-green-600" />
-        <h3 className="text-2xl font-bold text-green-900">業務提携・連携事業</h3>
-      </div>
-      
-      <div className="bg-white rounded-xl p-6">
-        <h4 className="text-xl font-bold text-green-900 mb-4">JTB総研との業務提携</h4>
-        <p className="text-gray-700 mb-4">
-          国内旅行業界最大手のJTB総合研究所と業務提携を結び、観光×環境×食をテーマにした新しい循環型ツーリズムの構築に取り組んでいます。
-        </p>
-        <p className="text-gray-700">
-          この連携では、MVファクトリーによる地域資源の活用と、RV事業による新しい滞在体験を組み合わせ、持続可能な観光モデルの創出を目指しています。
+  return (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('marinePage.title')}</h2>
+        <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          {t('marinePage.lead')}
         </p>
       </div>
+
+      {/* 海業事業 */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <Waves className="w-8 h-8 text-blue-600" />
+          <h3 className="text-2xl font-bold text-blue-900">{t('marinePage.biz.title')}</h3>
+        </div>
+        
+        <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+          {t('marinePage.biz.paragraph')}
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Ship className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-3">
+                {t('marinePage.biz.cards.tourism.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('marinePage.biz.cards.tourism.desc')}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-3">
+                {t('marinePage.biz.cards.exchange.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('marinePage.biz.cards.exchange.desc')}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Leaf className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-3">
+                {t('marinePage.biz.cards.edu.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('marinePage.biz.cards.edu.desc')}
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* RV事業 */}
+      <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <Truck className="w-8 h-8 text-blue-700" />
+          <h3 className="text-2xl font-bold text-blue-900">{t('marinePage.rv.title')}</h3>
+        </div>
+        
+        <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+          {t('marinePage.rv.paragraph')}
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6">
+              <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-3">
+                {t('marinePage.rv.cards.hotel.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                {t('marinePage.rv.cards.hotel.desc')}
+              </p>
+              <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                {t('marinePage.rv.cards.hotel.badge')}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6">
+              <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-3">
+                {t('marinePage.rv.cards.park.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                {t('marinePage.rv.cards.park.desc')}
+              </p>
+              <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                {t('marinePage.rv.cards.park.badge')}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6">
+              <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mb-4">
+                <Waves className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-3">
+                {t('marinePage.rv.cards.disaster.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                {t('marinePage.rv.cards.disaster.desc')}
+              </p>
+              <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                {t('marinePage.rv.cards.disaster.badge')}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* JTB総研との連携 */}
+      <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <Target className="w-8 h-8 text-green-600" />
+          <h3 className="text-2xl font-bold text-green-900">{t('marinePage.partnership.title')}</h3>
+        </div>
+        
+        <div className="bg-white rounded-xl p-6">
+          <h4 className="text-xl font-bold text-green-900 mb-4">
+            {t('marinePage.partnership.jtb.title')}
+          </h4>
+          <p className="text-gray-700 mb-4">
+            {t('marinePage.partnership.jtb.p1')}
+          </p>
+          <p className="text-gray-700">
+            {t('marinePage.partnership.jtb.p2')}
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-)
+  );
+};
+// ここまで置換
+
 
 const SeaweedPage = () => (
   <div className="space-y-8">

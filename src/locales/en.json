@@ -109,6 +109,36 @@
       "other": "Other"
     }
   }
+},
+"marinePage": {
+  "title": "Marine",
+  "lead": "Diversified business beyond traditional fisheries and new marine tourism leveraging RV.",
+  "biz": {
+    "title": "Marine Business",
+    "paragraph": "We develop diversified businesses beyond fisheries. We offer experiential fishing tourism at fishing ports, exchanges with local fishers, and on-site tasting of freshly caught seafood, along with environmental education programs linked to marine initiatives.",
+    "cards": {
+      "tourism": { "title": "Experiential Fishing Tourism", "desc": "Planning and operating tourism experience programs utilizing fishing ports." },
+      "exchange": { "title": "Exchange with Local Fishers", "desc": "Cultural exchange programs in collaboration with local fishers." },
+      "edu": { "title": "Environmental Education Programs", "desc": "Education and outreach on marine environmental conservation." }
+    }
+  },
+  "rv": {
+    "title": "RV Business",
+    "paragraph": "Functioning as mobile hotels, we roll out unique food and activity programs tied to marine initiatives. Night moves enable efficient trips, and fishing ports are used as RV parks to offer a unique stay experience.",
+    "cards": {
+      "hotel": { "title": "Mobile Hotel", "desc": "A mobile hotel service that provides high-quality lodging experiences.", "badge": "Hospitality" },
+      "park": { "title": "RV Park Operations", "desc": "Operation and management of RV parks utilizing fishing ports.", "badge": "Facility Ops" },
+      "disaster": { "title": "Disaster Response", "desc": "Providing functions as emergency evacuation facilities in disasters.", "badge": "Social Impact" }
+    }
+  },
+  "partnership": {
+    "title": "Partnerships & Collaborations",
+    "jtb": {
+      "title": "Partnership with JTB Research Institute",
+      "p1": "We have partnered with JTB Research Institute, a leading company in Japan’s travel industry, to build a new circular tourism model themed around tourism × environment × food.",
+      "p2": "This collaboration aims to create a sustainable tourism model by combining local resource utilization via the MV Factory with unique stay experiences through the RV business."
+    }
+  }
 }
 
 }
