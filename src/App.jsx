@@ -1,3 +1,4 @@
+// App.jsx（全文）
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageToggle from './components/LanguageToggle.jsx'
@@ -7,6 +8,12 @@ import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import heroBg from './assets/hero-bg.jpg'
 import sfcLogo from './assets/sfc-logo-new.svg'
 import './App.css'
+
+// ★ ここがポイント：本来のページ実装を import（パスはあなたの実ファイルに合わせてある想定）
+import MarinePage from './pages/Marine.jsx'
+import SeaweedPage from './pages/Seaweed.jsx'
+import CompanyPage from './pages/Company.jsx'
+import ContactPage from './pages/Contact.jsx'
 
 // ページコンポーネント
 const HomePage = () => {
@@ -215,68 +222,6 @@ const HomePage = () => {
       </Card>
     </section>
   </div>
-  )
-}
-
-// 他のページコンポーネントは簡易版として作成
-const MarinePage = () => (
-  /* …（あなたの元コードのまま）… */
-  <div className="space-y-8">{/* 省略 */}</div>
-)
-
-const SeaweedPage = () => (
-  /* …（あなたの元コードのまま）… */
-  <div className="space-y-8">{/* 省略 */}</div>
-)
-
-const CompanyPage = () => (
-  /* …（あなたの元コードのまま）… */
-  <div className="space-y-8">{/* 省略 */}</div>
-)
-
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null)
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus(null)
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      const data = await response.json()
-      if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-      } else {
-        setSubmitStatus('error')
-      }
-    } catch (e) {
-      console.error('送信エラー:', e)
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  return (
-    /* …（あなたの元コードのまま）… */
-    <div className="space-y-8">{/* 省略 */}</div>
   )
 }
 
