@@ -200,6 +200,9 @@
 "companyPage": {
   "title": "Company Overview",
   "info": {
+    "values": {
+        "rep": "Masahiro Watanabe"
+      },
     "title": "Corporate Information",
     "labels": {
       "name": "Company Name",

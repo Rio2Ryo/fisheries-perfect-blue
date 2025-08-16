@@ -200,6 +200,9 @@
 "companyPage": {
   "title": "会社概要",
   "info": {
+    "values": {
+      "rep": "渡邊昌宏"
+    },
     "title": "企業情報",
     "labels": {
       "name": "会社名",

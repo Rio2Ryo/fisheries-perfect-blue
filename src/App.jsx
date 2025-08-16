@@ -698,8 +698,8 @@ const CompanyPage = () => {
               <div className="flex items-start space-x-3">
                 <Users className="w-5 h-5 text-blue-600 mt-1" />
                 <div>
-                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.rep')}</dt>
-                  <dd className="text-gray-700">渡邊昌宏</dd>
+                <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.rep')}</dt>
+                <dd className="text-gray-700">{t('companyPage.info.values.rep')}</dd>
                   <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.intlDir')}</dt>
                   <dd className="text-gray-700">Michael Choong Liat Lee</dd>
                 </div>
