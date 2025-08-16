@@ -1,3 +1,4 @@
+// i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -18,7 +19,12 @@ i18n
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage']
-    }
+    },
+    // 重要：空文字・nullをフォールバック扱いに
+    returnEmptyString: false,
+    returnNull: false,
+    // Suspenseを使っていない場合の白画面回避
+    react: { useSuspense: false }
   });
 
 export default i18n;
