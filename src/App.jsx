@@ -98,15 +98,15 @@ const HomePage = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>{t('seaweed.items.description.mother')}</span>
+                <span>{t('seaweed.items.mother')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>{t('seaweed.items.description.factory')}</span>
+                <span>{t('seaweed.items.factory')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>{t('seaweed.items.description.approval')}</span>
+                <span>{t('seaweed.items.approval')}</span>
               </div>
             </div>
             <Link
