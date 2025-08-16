@@ -196,7 +196,37 @@
       "area": { "label": "Deployable Areas", "mv": "✓ Urban, mountainous, remote, disaster areas", "conv": "✗ Limited (mainly warm regions)" }
     }
   }
+},
+"companyPage": {
+  "title": "Company Overview",
+  "info": {
+    "title": "Corporate Information",
+    "labels": {
+      "name": "Company Name",
+      "ename": "English Name",
+      "rep": "Representative",
+      "intlDir": "International Director",
+      "address": "Address",
+      "eaddress": "English Address",
+      "tel": "TEL",
+      "email": "Email",
+      "business": "Business"
+    }
+  },
+  "philosophy": {
+    "title": "Our Mission",
+    "p1": "We contribute to the development of Japan’s coastal regions through the sustainable use of marine resources. Leveraging innovative technology and a nationwide network, our mission is to pass on a rich ocean to the next generation.",
+    "p2": "From an era of competing over scarcity to one of nurturing abundance. We are building mechanisms that fulfill both people and the planet."
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "Centering on promoting marine industries, we help revitalize Japan’s coastal regions.",
+    "p2": "In fisheries, we focus on sustainable resource management and efficient harvests to ensure a stable supply of high-quality seafood. We also support technological innovation across Japan’s aquaculture and fisheries. Under the government’s “marine industry” initiative, we are developing diversified businesses that go beyond traditional fishing.",
+    "p3": "Our marine initiatives include R&D, exchanges with local fishers, on-site tasting of freshly caught seafood, environmental education programs linked to fisheries, and activities such as dive tourism.",
+    "p4": "Leveraging our nationwide network of sister fisheries cooperatives, we share successes and challenges and build marine business models tailored to each region. This strengthens local economies, preserves traditions, creates jobs, and advances a comprehensive vision for the future of the fisheries industry."
+  }
 }
+
 
 
 }

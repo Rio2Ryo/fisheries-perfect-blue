@@ -668,108 +668,111 @@ const SeaweedPage = () => {
 // ここまで置換
 
 
-const CompanyPage = () => (
-  <div className="space-y-8">
-    <div className="text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">会社概要</h2>
-      <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
-    </div>
+// ここから置換
+const CompanyPage = () => {
+  const { t } = useTranslation();
 
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 className="text-2xl font-bold text-blue-900 mb-6">企業情報</h3>
-          <div className="space-y-4">
-            <div className="flex items-start space-x-3">
-              <Building2 className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
-                <dt className="font-semibold text-gray-900">会社名</dt>
-                <dd className="text-gray-700">全国姉妹漁協推進協議会株式会社</dd>
-                <dt className="font-semibold text-gray-900">English Name</dt>
-                <dd className="text-gray-700">National Sister Fisheries Promotion Council Co., Ltd.</dd>
+  return (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('companyPage.title')}</h2>
+        <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
+      </div>
+
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* 左カラム：企業情報 */}
+          <div>
+            <h3 className="text-2xl font-bold text-blue-900 mb-6">{t('companyPage.info.title')}</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <Building2 className="w-5 h-5 text-blue-600 mt-1" />
+                <div>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.name')}</dt>
+                  <dd className="text-gray-700">{t('company.name')}</dd>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.ename')}</dt>
+                  <dd className="text-gray-700">{t('company.ename')}</dd>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex items-start space-x-3">
-              <Users className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
-                <dt className="font-semibold text-gray-900">代表</dt>
-                <dd className="text-gray-700">渡邊昌宏</dd>
-                <dt className="font-semibold text-gray-900">International Director</dt>
-                <dd className="text-gray-700">Michael Choong Liat Lee</dd>
+
+              <div className="flex items-start space-x-3">
+                <Users className="w-5 h-5 text-blue-600 mt-1" />
+                <div>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.rep')}</dt>
+                  <dd className="text-gray-700">渡邊昌宏</dd>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.intlDir')}</dt>
+                  <dd className="text-gray-700">Michael Choong Liat Lee</dd>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <MapPin className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
-                <dt className="font-semibold text-gray-900">住所</dt>
-                <dd className="text-gray-700">〒413-0515　静岡県賀茂郡河津町谷津河津漁港512-2</dd>
-                <dt className="font-semibold text-gray-900">English Address</dt>
-                <dd className="text-gray-700">512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan</dd>
+
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-blue-600 mt-1" />
+                <div>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.address')}</dt>
+                  <dd className="text-gray-700">{t('company.address')}</dd>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.eaddress')}</dt>
+                  <dd className="text-gray-700">{t('company.eaddress')}</dd>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Phone className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
-                <dt className="font-semibold text-gray-900">TEL</dt>
-                <dd className="text-gray-700">0558-34-1025</dd>
+
+              <div className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 text-blue-600 mt-1" />
+                <div>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.tel')}</dt>
+                  <dd className="text-gray-700">0558-34-1025</dd>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Mail className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
-                <dt className="font-semibold text-gray-900">メール</dt>
-                <dd className="text-gray-700">contact@sfcpc.co.jp</dd>
+
+              <div className="flex items-start space-x-3">
+                <Mail className="w-5 h-5 text-blue-600 mt-1" />
+                <div>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.email')}</dt>
+                  <dd className="text-gray-700">contact@sfcpc.co.jp</dd>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Waves className="w-5 h-5 text-blue-600 mt-1" />
-              <div>
-                <dt className="font-semibold text-gray-900">事業内容</dt>
-                <dd className="text-gray-700">海業・RV・藻の養殖</dd>
+
+              <div className="flex items-start space-x-3">
+                <Waves className="w-5 h-5 text-blue-600 mt-1" />
+                <div>
+                  <dt className="font-semibold text-gray-900">{t('companyPage.info.labels.business')}</dt>
+                  <dd className="text-gray-700">{t('company.business')}</dd>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* 右カラム：企業理念 */}
+          <div>
+            <h3 className="text-2xl font-bold text-blue-900 mb-6">{t('companyPage.philosophy.title')}</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              {t('companyPage.philosophy.p1')}
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              {t('companyPage.philosophy.p2')}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* About us */}
+      <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <Waves className="w-8 h-8 text-blue-600" />
+          <h3 className="text-2xl font-bold text-blue-900">{t('companyPage.about.title')}</h3>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-bold text-blue-900 mb-6">企業理念</h3>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            私たちは、海洋資源の持続可能な活用を通じて、日本の沿岸地域の発展に貢献します。
-            革新的な技術と全国のネットワークを活かし、次世代に豊かな海を継承していくことが私たちの使命です。
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            「足りない」を"奪い合う"時代から、"育てて満たす"時代へ。
-            あなたと地球がともに満たされる仕組みを、私たちはかたちにしていきます。
-          </p>
+        <div className="prose prose-lg max-w-none text-gray-700">
+          <p className="mb-6">{t('companyPage.about.p1')}</p>
+          <p className="mb-6">{t('companyPage.about.p2')}</p>
+          <p className="mb-6">{t('companyPage.about.p3')}</p>
+          <p className="mb-6">{t('companyPage.about.p4')}</p>
         </div>
       </div>
     </div>
+  )
+}
+// ここまで置換
 
-    {/* About us section integrated */}
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-      <div className="flex items-center space-x-4 mb-6">
-        <Waves className="w-8 h-8 text-blue-600" />
-        <h3 className="text-2xl font-bold text-blue-900">私たちについて</h3>
-      </div>
-      
-      <div className="prose prose-lg max-w-none text-gray-700">
-        <p className="mb-6">
-          私たちは海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。
-        </p>
-        <p className="mb-6">
-          漁業では、持続可能な資源管理と効率的な漁獲を行い、高品質な水産物の安定供給に努めています。また、養殖にも力を入れ、日本全国各地の水産の技術革新を支援化する努力をしています。一方、日本政府の掲げる海業では、漁業の枠を超えた多角的な事業展開を行っています。
-        </p>
-        <p className="mb-6">
-          海業では、その技術研究開発、地域の漁師との交流、獲れたての海産物をその場で実食、漁業と連携した環境教育プログラム、観光ダイビングなどのアクティビティにも取り組んでおります。
-        </p>
-        <p className="mb-6">
-          全国の姉妹漁協とのネットワークを活かし、各地の成功事例や課題を共有し、地域の特性に合わせた海業モデルの構築を支援しています。これにより、漁村の経済基盤を強化し、伝統文化の継承と新たな雇用創出を実現、水産業の未来を見据えた包括的な取り組みを推進しています。
-        </p>
-      </div>
-    </div>
-  </div>
-)
 
 // ===== ここから ContactPage 丸ごと差し替え =====
 const ContactPage = () => {
