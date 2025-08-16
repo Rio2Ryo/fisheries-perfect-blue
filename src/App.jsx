@@ -173,53 +173,54 @@ const HomePage = () => {
 
 
     {/* Company Overview Card */}
-    <section>
-      <Card className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-        <CardContent className="p-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="mb-12 md:mb-0 flex-1">
-              <h3 className="text-2xl font-bold mb-6">会社概要</h3>
-              <div className="space-y-4 text-blue-100">
-                <div className="flex items-center space-x-3">
-                  <Building2 className="w-5 h-5" />
-                  <span>会社名</span>
-                  <span className="text-white">全国姉妹漁協推進協議会株式会社</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Building2 className="w-5 h-5 invisible" />
-                  <span>English Name</span>
-                  <span className="text-white">National Sister Fisheries Promotion Council Co., Ltd.</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5" />
-                  <span>所在地</span>
-                  <span className="text-white">静岡県賀茂郡河津町谷津河津漁港512-2</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 invisible" />
-                  <span>English Address</span>
-                  <span className="text-white">512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Waves className="w-5 h-5" />
-                  <span>事業内容</span>
-                  <span className="text-white">海業・RV・藻の養殖</span>
-                </div>
-              </div>
+<section>
+  <Card className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+    <CardContent className="p-8">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="mb-12 md:mb-0 flex-1">
+          <h3 className="text-2xl font-bold mb-6">{t('company.title')}</h3>
+          <div className="space-y-4 text-blue-100">
+            <div className="flex items-center space-x-3">
+              <Building2 className="w-5 h-5" />
+              <span>{t('company.labels.name')}</span>
+              <span className="text-white">{t('company.name')}</span>
             </div>
-            <div className="flex-shrink-0 md:ml-12 md:mt-8">
-              <Link
-                to="/company"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2 shadow-md"
-              >
-                <span>詳細を見る</span>
-                <ChevronRight className="w-4 h-4" />
-              </Link>
+            <div className="flex items-center space-x-3">
+              <Building2 className="w-5 h-5 invisible" />
+              <span>{t('company.labels.ename')}</span>
+              <span className="text-white">{t('company.ename')}</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5" />
+              <span>{t('company.labels.address')}</span>
+              <span className="text-white">{t('company.address')}</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5 invisible" />
+              <span>{t('company.labels.eaddress')}</span>
+              <span className="text-white">{t('company.eaddress')}</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Waves className="w-5 h-5" />
+              <span>{t('company.labels.business')}</span>
+              <span className="text-white">{t('company.business')}</span>
             </div>
           </div>
-        </CardContent>
-      </Card>
-    </section>
+        </div>
+        <div className="flex-shrink-0 md:ml-12 md:mt-8">
+          <Link
+            to="/company"
+            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2 shadow-md"
+          >
+            <span>{t('company.cta')}</span>
+            <ChevronRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</section>
+
   </div>
   )
 }

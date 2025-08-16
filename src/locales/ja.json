@@ -52,6 +52,22 @@
     "title": "多角的事業展開",
     "description": "海業・RV・藻の養殖を組み合わせた独自のビジネスモデルで、持続可能な海洋資源活用を実現。"
   }
+},
+"company": {
+  "title": "会社概要",
+  "labels": {
+    "name": "会社名",
+    "ename": "English Name",
+    "address": "所在地",
+    "eaddress": "English Address",
+    "business": "事業内容"
+  },
+  "name": "全国姉妹漁協推進協議会株式会社",
+  "ename": "National Sister Fisheries Promotion Council Co., Ltd.",
+  "address": "静岡県賀茂郡河津町谷津河津漁港512-2",
+  "eaddress": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
+  "business": "海業・RV・藻の養殖",
+  "cta": "詳細を見る"
 }
 
 }

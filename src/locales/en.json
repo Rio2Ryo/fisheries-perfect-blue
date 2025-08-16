@@ -52,6 +52,22 @@
     "title": "Diversified Business Expansion",
     "description": "With a unique business model combining marine business, RV, and seaweed cultivation, we realize sustainable utilization of marine resources."
   }
+},
+"company": {
+  "title": "Company Overview",
+  "labels": {
+    "name": "Company Name",
+    "ename": "English Name",
+    "address": "Address",
+    "eaddress": "English Address",
+    "business": "Business Areas"
+  },
+  "name": "National Sister Fisheries Promotion Council Co., Ltd.",
+  "ename": "National Sister Fisheries Promotion Council Co., Ltd.",
+  "address": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
+  "eaddress": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
+  "business": "Marine Business, RV, and Seaweed Cultivation",
+  "cta": "Learn More"
 }
 
 }
