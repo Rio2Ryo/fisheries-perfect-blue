@@ -386,211 +386,287 @@ const MarinePage = () => {
 // ここまで置換
 
 
-const SeaweedPage = () => (
-  <div className="space-y-8">
-    <div className="text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">藻の養殖</h2>
-      <div className="w-24 h-1 bg-blue-800 mx-auto mb-8"></div>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        "地球のはじまりの植物"で世界を満たす革新的な養殖技術
-      </p>
-    </div>
+// ここから置換
+const SeaweedPage = () => {
+  const { t } = useTranslation();
 
-    {/* Mother Vegetables Section */}
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
-      <div className="flex items-center space-x-4 mb-6">
-        <Leaf className="w-8 h-8 text-green-600" />
-        <h3 className="text-2xl font-bold text-green-900">マザーベジタブル（Mother Vegetables）</h3>
-      </div>
-      
-      <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-        約30億年に渡り姿を保ち続けてきた「地球のはじまりの植物」——それが、マザーベジタブル（通称：マザベジ）。
-        私たちは、その中でも用途に応じて約2,000種類のタイプを選別・培養し、食・美容・環境・医療・工業分野に展開可能な素材として育てています。
-      </p>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Leaf className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-green-900 mb-3">食品分野</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              グルテンフリー・高タンパク食品、天然着色料、栄養補助食品
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Building2 className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-green-900 mb-3">化粧品・医薬品</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              植物性オイル、超高純度オーガニックシリカ、代替成分
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Waves className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-green-900 mb-3">海洋生態系</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              磯焼け対策、海藻再生、魚の餌資源、生態系循環支援
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-md">
-          <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Factory className="w-6 h-6 text-white" />
-            </div>
-            <h4 className="text-lg font-semibold text-green-900 mb-3">工業製品</h4>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              CO2ゼロ、公害ゼロ、人体汚染ゼロの次世代工業原料
-            </p>
-          </CardContent>
-        </Card>
+  return (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('seaweedPage.title')}</h2>
+        <div className="w-24 h-1 bg-blue-800 mx-auto mb-8"></div>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          {t('seaweedPage.lead')}
+        </p>
       </div>
 
-      <div className="bg-white rounded-xl p-6">
-        <h4 className="text-xl font-bold text-green-900 mb-4">マザーベジタブルの特徴</h4>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h5 className="font-semibold text-gray-900 mb-2">環境への貢献</h5>
-            <p className="text-gray-700 text-sm">光合成によってCO₂を吸収しながら成長し、化学合成や農薬に頼らずとも、純粋で栄養価の高い恵みを生み出します。</p>
-          </div>
-          <div>
-            <h5 className="font-semibold text-gray-900 mb-2">多様な形態</h5>
-            <p className="text-gray-700 text-sm">パウダー・オイル・エキス・濾材・バイオマスとして、姿を変え、人と動植物、そして地球そのものに貢献できます。</p>
-          </div>
+      {/* Mother Vegetables Section */}
+      <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <Leaf className="w-8 h-8 text-green-600" />
+          <h3 className="text-2xl font-bold text-green-900">
+            {t('seaweedPage.mother.title')}
+          </h3>
         </div>
-      </div>
-    </div>
 
-    {/* MVファクトリー Section */}
-    <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8">
-      <div className="flex items-center space-x-4 mb-6">
-        <Factory className="w-8 h-8 text-blue-600" />
-        <h3 className="text-2xl font-bold text-blue-900">MVファクトリー</h3>
-      </div>
-      
-      <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-        太陽光に頼らず、30倍の速さで育つ次世代モジュール。MVファクトリーは、食・美容・健康に活用されるマザーベジタブルを、
-        世界最速かつ安定的に育てるために設計された、完全循環型の育成モジュールです。
-      </p>
+        <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+          {t('seaweedPage.mother.p1')}
+        </p>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
-        <div className="bg-white rounded-xl p-6">
-          <h4 className="text-xl font-bold text-blue-900 mb-4">革新的技術</h4>
-          <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>国際特許番号 WO2023234767取得済み</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>AIが光をコントロールする独自システム</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>完全閉鎖型・人工光制御環境</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>2,000種類の個性あるマザーベジタブルに対応</span>
-            </li>
-          </ul>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Leaf className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-green-900 mb-3">
+                {t('seaweedPage.mother.cards.food.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('seaweedPage.mother.cards.food.desc')}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-green-900 mb-3">
+                {t('seaweedPage.mother.cards.cosmetics.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('seaweedPage.mother.cards.cosmetics.desc')}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Waves className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-green-900 mb-3">
+                {t('seaweedPage.mother.cards.ecosystem.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('seaweedPage.mother.cards.ecosystem.desc')}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-white shadow-md">
+            <CardContent className="p-6 text-center">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Factory className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-green-900 mb-3">
+                {t('seaweedPage.mother.cards.industry.title')}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t('seaweedPage.mother.cards.industry.desc')}
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="bg-white rounded-xl p-6">
-          <h4 className="text-xl font-bold text-blue-900 mb-4">設置可能場所</h4>
-          <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>学校・ビル屋上・地下シェルター</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>被災地・物流途絶エリア</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>耕作放棄地・廃校</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-              <span>水上・砂漠・極寒地域</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="bg-white rounded-xl p-6">
-        <h4 className="text-xl font-bold text-blue-900 mb-4">実績・連携</h4>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div>
-            <h5 className="font-semibold text-gray-900 mb-2">水産庁承認</h5>
-            <p className="text-gray-700 text-sm">伊豆の河津港に設置決定（2025年4月4日承認）</p>
-          </div>
-          <div>
-            <h5 className="font-semibold text-gray-900 mb-2">マレーシア政府</h5>
-            <p className="text-gray-700 text-sm">東京ドーム40個分の土地でMVファクトリー建設</p>
-          </div>
-          <div>
-            <h5 className="font-semibold text-gray-900 mb-2">国際連携</h5>
-            <p className="text-gray-700 text-sm">マラヤ大学、シンガポール大学、ノッティンガム大学と技術提携</p>
+          <h4 className="text-xl font-bold text-green-900 mb-4">
+            {t('seaweedPage.mother.features.title')}
+          </h4>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h5 className="font-semibold text-gray-900 mb-2">
+                {t('seaweedPage.mother.features.items.env.title')}
+              </h5>
+              <p className="text-gray-700 text-sm">
+                {t('seaweedPage.mother.features.items.env.desc')}
+              </p>
+            </div>
+            <div>
+              <h5 className="font-semibold text-gray-900 mb-2">
+                {t('seaweedPage.mother.features.items.forms.title')}
+              </h5>
+              <p className="text-gray-700 text-sm">
+                {t('seaweedPage.mother.features.items.forms.desc')}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    {/* 従来技術との比較 */}
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-8">
-      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">従来の藻養殖との比較</h3>
-      
-      {/* Comparison Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full bg-white rounded-lg shadow-md">
-          <thead className="bg-blue-600 text-white">
-            <tr>
-              <th className="px-4 py-3 text-left text-sm font-medium">項目</th>
-              <th className="px-4 py-3 text-left text-sm font-medium">MVファクトリー</th>
-              <th className="px-4 py-3 text-left text-sm font-medium">従来の藻養殖</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            <tr>
-              <td className="px-4 py-3 font-medium text-sm">育成スピード</td>
-              <td className="px-4 py-3 text-green-600 text-sm">◯約30倍の速度で成長</td>
-              <td className="px-4 py-3 text-red-600 text-sm">✕遅い（週〜月）</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 font-medium text-sm">育成環境</td>
-              <td className="px-4 py-3 text-green-600 text-sm">◯完全閉鎖型・人工光制御</td>
-              <td className="px-4 py-3 text-red-600 text-sm">✕開放型・天候依存</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 font-medium text-sm">取り扱い種類</td>
-              <td className="px-4 py-3 text-green-600 text-sm">◯2,000種類</td>
-              <td className="px-4 py-3 text-red-600 text-sm">✕数種類〜数十種類</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 font-medium text-sm">展開可能エリア</td>
-              <td className="px-4 py-3 text-green-600 text-sm">◯都市・山間・僻地・被災地も可</td>
-              <td className="px-4 py-3 text-red-600 text-sm">✕限定（温暖地域中心）</td>
-            </tr>
-          </tbody>
-        </table>
+      {/* MV Factory Section */}
+      <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <Factory className="w-8 h-8 text-blue-600" />
+          <h3 className="text-2xl font-bold text-blue-900">
+            {t('seaweedPage.factory.title')}
+          </h3>
+        </div>
+
+        <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+          {t('seaweedPage.factory.p')}
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="bg-white rounded-xl p-6">
+            <h4 className="text-xl font-bold text-blue-900 mb-4">
+              {t('seaweedPage.factory.tech.title')}
+            </h4>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.tech.list1')}</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.tech.list2')}</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.tech.list3')}</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.tech.list4')}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-xl p-6">
+            <h4 className="text-xl font-bold text-blue-900 mb-4">
+              {t('seaweedPage.factory.locations.title')}
+            </h4>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.locations.list1')}</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.locations.list2')}</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.locations.list3')}</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <span>{t('seaweedPage.factory.locations.list4')}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl p-6">
+          <h4 className="text-xl font-bold text-blue-900 mb-4">
+            {t('seaweedPage.factory.achievements.title')}
+          </h4>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <h5 className="font-semibold text-gray-900 mb-2">
+                {t('seaweedPage.factory.achievements.items.fisheries.title')}
+              </h5>
+              <p className="text-gray-700 text-sm">
+                {t('seaweedPage.factory.achievements.items.fisheries.desc')}
+              </p>
+            </div>
+            <div>
+              <h5 className="font-semibold text-gray-900 mb-2">
+                {t('seaweedPage.factory.achievements.items.malaysia.title')}
+              </h5>
+              <p className="text-gray-700 text-sm">
+                {t('seaweedPage.factory.achievements.items.malaysia.desc')}
+              </p>
+            </div>
+            <div>
+              <h5 className="font-semibold text-gray-900 mb-2">
+                {t('seaweedPage.factory.achievements.items.international.title')}
+              </h5>
+              <p className="text-gray-700 text-sm">
+                {t('seaweedPage.factory.achievements.items.international.desc')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Comparison */}
+      <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-8">
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">
+          {t('seaweedPage.compare.title')}
+        </h3>
+
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white rounded-lg shadow-md">
+            <thead className="bg-blue-600 text-white">
+              <tr>
+                <th className="px-4 py-3 text-left text-sm font-medium">
+                  {t('seaweedPage.compare.table.headers.item')}
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium">
+                  {t('seaweedPage.compare.table.headers.mv')}
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium">
+                  {t('seaweedPage.compare.table.headers.conv')}
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              <tr>
+                <td className="px-4 py-3 font-medium text-sm">
+                  {t('seaweedPage.compare.rows.speed.label')}
+                </td>
+                <td className="px-4 py-3 text-green-600 text-sm">
+                  {t('seaweedPage.compare.rows.speed.mv')}
+                </td>
+                <td className="px-4 py-3 text-red-600 text-sm">
+                  {t('seaweedPage.compare.rows.speed.conv')}
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium text-sm">
+                  {t('seaweedPage.compare.rows.environment.label')}
+                </td>
+                <td className="px-4 py-3 text-green-600 text-sm">
+                  {t('seaweedPage.compare.rows.environment.mv')}
+                </td>
+                <td className="px-4 py-3 text-red-600 text-sm">
+                  {t('seaweedPage.compare.rows.environment.conv')}
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium text-sm">
+                  {t('seaweedPage.compare.rows.variety.label')}
+                </td>
+                <td className="px-4 py-3 text-green-600 text-sm">
+                  {t('seaweedPage.compare.rows.variety.mv')}
+                </td>
+                <td className="px-4 py-3 text-red-600 text-sm">
+                  {t('seaweedPage.compare.rows.variety.conv')}
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium text-sm">
+                  {t('seaweedPage.compare.rows.area.label')}
+                </td>
+                <td className="px-4 py-3 text-green-600 text-sm">
+                  {t('seaweedPage.compare.rows.area.mv')}
+                </td>
+                <td className="px-4 py-3 text-red-600 text-sm">
+                  {t('seaweedPage.compare.rows.area.conv')}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
-)
+  );
+};
+// ここまで置換
+
 
 const CompanyPage = () => (
   <div className="space-y-8">

@@ -139,6 +139,64 @@
       "p2": "This collaboration aims to create a sustainable tourism model by combining local resource utilization via the MV Factory with unique stay experiences through the RV business."
     }
   }
+},
+"seaweedPage": {
+  "title": "Seaweed Cultivation",
+  "lead": "Innovative cultivation technology to enrich the world with the “first plants on Earth.”",
+  "mother": {
+    "title": "Mother Vegetables",
+    "p1": "Mother Vegetables are the so-called “first plants on Earth,” retaining their form for about 3 billion years. We select and culture roughly 2,000 types by use, developing them as materials applicable to food, beauty, environment, healthcare, and industry.",
+    "cards": {
+      "food": { "title": "Food Sector", "desc": "Gluten-free/high-protein foods, natural colorants, dietary supplements" },
+      "cosmetics": { "title": "Cosmetics & Pharmaceuticals", "desc": "Plant-based oils, ultra-high-purity organic silica, alternative ingredients" },
+      "ecosystem": { "title": "Marine Ecosystems", "desc": "Measures against barren grounds, seaweed restoration, fish feed resources, ecosystem cycling" },
+      "industry": { "title": "Industrial Products", "desc": "Next-generation industrial materials with zero CO₂, zero pollution, and zero human contamination" }
+    },
+    "features": {
+      "title": "Key Features of Mother Vegetables",
+      "items": {
+        "env": { "title": "Environmental Contribution", "desc": "They grow while absorbing CO₂ via photosynthesis, producing pure, nutrient-rich yields without relying on chemical synthesis or pesticides." },
+        "forms": { "title": "Diverse Forms", "desc": "Offered as powder, oil, extract, filter media, and biomass, contributing to people, living things, and the planet." }
+      }
+    }
+  },
+  "factory": {
+    "title": "MV Factory",
+    "p": "A next-generation module that grows 30× faster without sunlight. MV Factory is a fully circular cultivation module designed to grow Mother Vegetables—used in food, beauty, and health—at the world’s fastest and most stable rates.",
+    "tech": {
+      "title": "Innovative Technology",
+      "list1": "International patent WO2023234767 obtained",
+      "list2": "Proprietary AI-controlled lighting system",
+      "list3": "Fully enclosed environment with artificial light control",
+      "list4": "Supports 2,000 distinct Mother Vegetables types"
+    },
+    "locations": {
+      "title": "Possible Installation Sites",
+      "list1": "Schools, building rooftops, underground shelters",
+      "list2": "Disaster areas and logistics-disconnected regions",
+      "list3": "Abandoned farmland and closed schools",
+      "list4": "On water, deserts, and cold regions"
+    },
+    "achievements": {
+      "title": "Track Record & Partnerships",
+      "items": {
+        "fisheries": { "title": "Approved by Fisheries Agency", "desc": "Installation decided for Kawazu Port in Izu (approved on Apr 4, 2025)" },
+        "malaysia": { "title": "Government of Malaysia", "desc": "Building an MV Factory on land equivalent to 40 Tokyo Domes" },
+        "international": { "title": "International Collaboration", "desc": "Technology partnerships with University of Malaya, National University of Singapore, and University of Nottingham" }
+      }
+    }
+  },
+  "compare": {
+    "title": "Comparison with Conventional Algae Cultivation",
+    "table": { "headers": { "item": "Item", "mv": "MV Factory", "conv": "Conventional Algae Cultivation" } },
+    "rows": {
+      "speed": { "label": "Growth Speed", "mv": "✓ ~30× faster growth", "conv": "✗ Slow (weeks to months)" },
+      "environment": { "label": "Cultivation Environment", "mv": "✓ Fully enclosed, artificial-light controlled", "conv": "✗ Open, weather-dependent" },
+      "variety": { "label": "Varieties Handled", "mv": "✓ 2,000 types", "conv": "✗ A few to dozens" },
+      "area": { "label": "Deployable Areas", "mv": "✓ Urban, mountainous, remote, disaster areas", "conv": "✗ Limited (mainly warm regions)" }
+    }
+  }
 }
+
 
 }
