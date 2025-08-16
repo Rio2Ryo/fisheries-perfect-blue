@@ -68,6 +68,11 @@
   "eaddress": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
   "business": "海業・RV・藻の養殖",
   "cta": "詳細を見る"
+},
+"footer": {
+  "description": "海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。",
+  "businessTitle": "事業内容",
+  "tel": "TEL"
 }
 
 }

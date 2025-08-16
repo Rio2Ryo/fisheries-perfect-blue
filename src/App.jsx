@@ -1005,88 +1005,93 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src={sfcLogo} 
-                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-16 w-auto brightness-0 invert"
-                />
-              </div>
-              <p className="text-gray-300 leading-relaxed">
-                海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">事業内容</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <Link 
-                  to="/marine"
-                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  海業
-                </Link>
-                <Link 
-                  to="/seaweed"
-                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  藻の養殖
-                </Link>
-                <Link 
-                  to="/company"
-                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  会社概要
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  お問い合わせ
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-              <div className="flex space-x-6 mb-4 md:mb-0 hidden md:flex">
-                <Link 
-                  to="/marine"
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  海業
-                </Link>
-                <Link 
-                  to="/seaweed"
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  藻の養殖
-                </Link>
-                <Link 
-                  to="/company"
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  会社概要
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  お問い合わせ
-                </Link>
-              </div>
-              <div className="text-gray-400 text-sm">
-                TEL: 0558-34-1025
-              </div>
-            </div>
-          </div>
+<footer className="bg-gray-900 text-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* 左側 */}
+      <div>
+        <div className="flex items-center space-x-3 mb-6">
+          <img 
+            src={sfcLogo} 
+            alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
+            className="h-16 w-auto brightness-0 invert"
+          />
         </div>
-      </footer>
+        <p className="text-gray-300 leading-relaxed">
+          {t('footer.description')}
+        </p>
+      </div>
+
+      {/* 右側 */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4">
+          {t('footer.businessTitle')}
+        </h4>
+        <div className="grid grid-cols-2 gap-4">
+          <Link 
+            to="/marine"
+            className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.marine')}
+          </Link>
+          <Link 
+            to="/seaweed"
+            className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.seaweed')}
+          </Link>
+          <Link 
+            to="/company"
+            className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.company')}
+          </Link>
+          <Link 
+            to="/contact"
+            className="text-left text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.contact')}
+          </Link>
+        </div>
+      </div>
+    </div>
+
+    <div className="border-t border-gray-800 mt-8 pt-8">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="flex space-x-6 mb-4 md:mb-0 hidden md:flex">
+          <Link 
+            to="/marine"
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.marine')}
+          </Link>
+          <Link 
+            to="/seaweed"
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.seaweed')}
+          </Link>
+          <Link 
+            to="/company"
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.company')}
+          </Link>
+          <Link 
+            to="/contact"
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          >
+            {t('nav.contact')}
+          </Link>
+        </div>
+        <div className="text-gray-400 text-sm">
+          {t('footer.tel')}: 0558-34-1025
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   )
 }
