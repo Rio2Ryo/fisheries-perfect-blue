@@ -37,5 +37,21 @@
         "approval": "Approved by Fisheries Agency / International Collaboration"
       },
       "cta": "Learn More"
+  },
+  "whyChooseUs": {
+  "title": "Why Choose Us",
+  "network": {
+    "title": "Nationwide Network",
+    "description": "Approximately 150,000 fisheries cooperative members and 160,000 associate members. Leveraging a network of 310,000 members to further develop the marine business."
+  },
+  "technology": {
+    "title": "Unique Technology",
+    "description": "Through joint research with Flinders University in Australia, we have established innovative algal genome analysis technology and hold patented technology that grows algae within 24 hours."
+  },
+  "diversity": {
+    "title": "Diversified Business Expansion",
+    "description": "With a unique business model combining marine business, RV, and seaweed cultivation, we realize sustainable utilization of marine resources."
   }
+}
+
 }

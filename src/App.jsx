@@ -122,43 +122,55 @@ const HomePage = () => {
     </section>
 
     {/* Why Choose Us */}
-    <section className="bg-white rounded-2xl p-8 sm:p-12">
-      <div className="text-center mb-12">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">なぜ私たちが選ばれるのか</h3>
+<section className="bg-white rounded-2xl p-8 sm:p-12">
+  <div className="text-center mb-12">
+    <h3 className="text-3xl font-bold text-gray-900 mb-4">
+      {t('whyChooseUs.title')}
+    </h3>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-8">
+    {/* 全国ネットワーク */}
+    <div className="text-center">
+      <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+        <Users className="w-8 h-8 text-white" />
       </div>
+      <h4 className="text-xl font-semibold text-gray-900 mb-4">
+        {t('whyChooseUs.network.title')}
+      </h4>
+      <p className="text-gray-600 leading-relaxed">
+        {t('whyChooseUs.network.description')}
+      </p>
+    </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
-            <Users className="w-8 h-8 text-white" />
-          </div>
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">全国ネットワーク</h4>
-          <p className="text-gray-600 leading-relaxed">
-            全国の漁業組合員数はおよそ15万人。準組合員数はおよそ16万人。31万人の組合員のネットワークを使用し海業をさらに発展させています。
-          </p>
-        </div>
-
-        <div className="text-center">
-          <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
-            <Factory className="w-8 h-8 text-white" />
-          </div>
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">独自技術</h4>
-          <p className="text-gray-600 leading-relaxed">
-            豪フリンダース大学との共同研究により、革新的な藻類ゲノム解析技術を確立。24時間で藻を成長させる特許技術を保有。
-          </p>
-        </div>
-
-        <div className="text-center">
-          <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
-            <Target className="w-8 h-8 text-white" />
-          </div>
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">多角的事業展開</h4>
-          <p className="text-gray-600 leading-relaxed">
-            海業・RV・藻の養殖を組み合わせた独自のビジネスモデルで、持続可能な海洋資源活用を実現。
-          </p>
-        </div>
+    {/* 独自技術 */}
+    <div className="text-center">
+      <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+        <Factory className="w-8 h-8 text-white" />
       </div>
-    </section>
+      <h4 className="text-xl font-semibold text-gray-900 mb-4">
+        {t('whyChooseUs.technology.title')}
+      </h4>
+      <p className="text-gray-600 leading-relaxed">
+        {t('whyChooseUs.technology.description')}
+      </p>
+    </div>
+
+    {/* 多角的事業展開 */}
+    <div className="text-center">
+      <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+        <Target className="w-8 h-8 text-white" />
+      </div>
+      <h4 className="text-xl font-semibold text-gray-900 mb-4">
+        {t('whyChooseUs.diversity.title')}
+      </h4>
+      <p className="text-gray-600 leading-relaxed">
+        {t('whyChooseUs.diversity.description')}
+      </p>
+    </div>
+  </div>
+</section>
+
 
     {/* Company Overview Card */}
     <section>
