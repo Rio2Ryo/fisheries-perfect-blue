@@ -53,7 +53,7 @@ const HomePage = () => {
             <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
               <Waves className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-xl text-gray-900">海業</CardTitle>
+            <CardTitle className="text-xl text-gray-900">{t('business.marine.title')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
