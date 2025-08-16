@@ -28,14 +28,13 @@ const HomePage = () => {
           {t('hero.subtitle')}
         </p>
         <p className="text-lg text-blue-50 max-w-4xl mx-auto mb-12 leading-relaxed">
-          海業推進を基軸とし、漁業の枠を超えた多角的な事業展開で日本の沿岸地域の活性化に貢献しています。
-          独自の技術と全国の漁業組合との連携により、持続可能な海洋資源の活用を実現します。
+        {t('hero.description')}
         </p>
         <Link
           to="/contact"
           className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2 shadow-lg"
         >
-          <span>お問い合わせはこちら</span>
+          <span>{t('hero.cta')}</span>
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>
@@ -44,7 +43,7 @@ const HomePage = () => {
     {/* Business Overview */}
     <section>
       <div className="text-center mb-12">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">事業概要</h3>
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('business.title')}</h3>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -58,27 +57,27 @@ const HomePage = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
-              漁業の枠を超えた多角的な事業展開。体験型観光漁業、移動式ホテル・RVパーク運営、JTB総研との業務提携による革新的な海洋ツーリズムを展開。
+            {t('business.description')}
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <span>体験型観光漁業</span>
+                <span>{t('business.marine.items.tourism')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <span>移動式ホテル・RVパーク</span>
+                <span>{t('business.marine.items.rv')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <span>JTB総研との業務提携</span>
+                <span>{t('business.marine.items.jtb')}</span>
               </div>
             </div>
             <Link
               to="/marine"
               className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
             >
-              <span>詳細を見る</span>
+              <span>{t('business.cta')}</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </CardContent>
@@ -90,31 +89,31 @@ const HomePage = () => {
             <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
               <Leaf className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-xl text-gray-900">藻の養殖</CardTitle>
+            <CardTitle className="text-xl text-gray-900">{t('seaweed.title')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
-              "地球のはじまりの植物"マザーベジタブルとMVファクトリーによる革新的な養殖技術。30倍の速度で成長する次世代モジュールで、食・美容・環境・工業分野に展開。
+            {t('seaweed.description')}
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>マザーベジタブル（2,000種類）</span>
+                <span>{t('seaweed.description.mother')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>MVファクトリー（国際特許）</span>
+                <span>{t('seaweed.description.factory')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>水産庁承認・国際連携</span>
+                <span>{t('seaweed.description.approval')}</span>
               </div>
             </div>
             <Link
               to="/seaweed"
               className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
             >
-              <span>詳細を見る</span>
+              <span>{t('seaweed.cta')}</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </CardContent>
