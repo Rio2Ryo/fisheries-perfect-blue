@@ -26,8 +26,8 @@
         "jtb": "Partnership with JTB Research"
       },
       "cta": "Learn More"
-    }
-  }, "seaweed": {
+    },
+    "seaweed": {
       "title": "Seaweed Cultivation",
       "description": "\"The Earth's First Plant\" — innovative cultivation technology by Mother Vegetables and MV Factory. With next-generation modules that grow 30 times faster, expanding into food, beauty, environment, and industry fields.",
       "items": {
@@ -37,4 +37,5 @@
       },
       "cta": "Learn More"
     }
+  }
 }
