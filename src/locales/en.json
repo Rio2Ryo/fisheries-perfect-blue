@@ -73,7 +73,42 @@
   "description": "Focusing on promoting marine industries, we contribute to the revitalization of Japan's coastal regions.",
   "businessTitle": "Business Areas",
   "tel": "TEL"
+},
+"contact": {
+  "title": "Contact Us",
+  "subtitle": "Feel Free to Reach Out",
+  "description": "If you have any questions or inquiries regarding our marine business or seaweed cultivation, please feel free to contact us.",
+  "labels": {
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  },
+  "address": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
+  "form": {
+    "title": "Contact Form",
+    "success": "Your message has been sent. Thank you.",
+    "error": "Failed to send. Please try again.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "placeholders": {
+      "name": "Taro Yamada",
+      "email": "example@email.com",
+      "phone": "090-1234-5678",
+      "select": "Please select",
+      "message": "Please enter your inquiry"
+    },
+    "options": {
+      "marine": "About Marine Business",
+      "seaweed": "About Seaweed Cultivation",
+      "partnership": "About Partnerships",
+      "other": "Other"
+    }
+  }
 }
-
 
 }

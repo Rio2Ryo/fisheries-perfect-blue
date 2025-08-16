@@ -73,6 +73,42 @@
   "description": "海業推進を基軸とし、日本の沿岸地域の活性化に貢献しています。",
   "businessTitle": "事業内容",
   "tel": "TEL"
+},
+"contact": {
+  "title": "お問い合わせ",
+  "subtitle": "お気軽にお問い合わせください",
+  "description": "海業事業、藻の養殖に関するご質問やご相談がございましたら、お気軽にお問い合わせください。",
+  "labels": {
+    "phone": "電話番号",
+    "email": "メールアドレス",
+    "address": "所在地"
+  },
+  "address": "〒413-0515　静岡県賀茂郡河津町谷津河津漁港512-2",
+  "form": {
+    "title": "お問い合わせフォーム",
+    "success": "お問い合わせを送信しました。ありがとうございます。",
+    "error": "送信に失敗しました。もう一度お試しください。",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "subject": "件名",
+    "message": "お問い合わせ内容",
+    "submit": "送信する",
+    "sending": "送信中...",
+    "placeholders": {
+      "name": "山田太郎",
+      "email": "example@email.com",
+      "phone": "090-1234-5678",
+      "select": "選択してください",
+      "message": "お問い合わせ内容をご記入ください"
+    },
+    "options": {
+      "marine": "海業事業について",
+      "seaweed": "藻の養殖について",
+      "partnership": "業務提携について",
+      "other": "その他"
+    }
+  }
 }
 
 }

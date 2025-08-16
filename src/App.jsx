@@ -729,70 +729,84 @@ const ContactPage = () => {
   };
 
   return (
-  <div className="space-y-8">
+    <div className="space-y-8">
     <div className="text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        {t('contact.title')}
+      </h2>
       <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
     </div>
-
+  
     <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
       <div className="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 className="text-2xl font-bold text-blue-900 mb-6">お気軽にお問い合わせください</h3>
+          <h3 className="text-2xl font-bold text-blue-900 mb-6">
+            {t('contact.subtitle')}
+          </h3>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            海業事業、藻の養殖に関するご質問やご相談がございましたら、お気軽にお問い合わせください。
+            {t('contact.description')}
           </p>
-          
+  
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Phone className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-gray-900">電話番号</div>
+                <div className="font-semibold text-gray-900">
+                  {t('contact.labels.phone')}
+                </div>
                 <div className="text-gray-700">0558-34-1025</div>
               </div>
             </div>
-            
+  
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Mail className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-gray-900">メールアドレス</div>
+                <div className="font-semibold text-gray-900">
+                  {t('contact.labels.email')}
+                </div>
                 <div className="text-gray-700">contact@sfcpc.co.jp</div>
               </div>
             </div>
-            
+  
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-gray-900">所在地</div>
-                <div className="text-gray-700">〒413-0515　静岡県賀茂郡河津町谷津河津漁港512-2</div>
+                <div className="font-semibold text-gray-900">
+                  {t('contact.labels.address')}
+                </div>
+                <div className="text-gray-700">
+                  {t('contact.address')}
+                </div>
               </div>
             </div>
           </div>
         </div>
-
+  
         <div className="bg-white rounded-xl p-6 shadow-md">
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">お問い合わせフォーム</h4>
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">
+            {t('contact.form.title')}
+          </h4>
           <form className="space-y-4" onSubmit={handleSubmit}>
             {submitStatus === 'success' && (
               <div className="p-4 bg-green-100 text-green-700 rounded-md mb-4">
-                お問い合わせを送信しました。ありがとうございます。
+                {t('contact.form.success')}
               </div>
             )}
             {submitStatus === 'error' && (
               <div className="p-4 bg-red-100 text-red-700 rounded-md mb-4">
-                送信に失敗しました。もう一度お試しください。
+                {t('contact.form.error')}
               </div>
             )}
-            
+  
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                お名前 <span className="text-red-500">*</span>
+                {t('contact.form.name')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -801,14 +815,14 @@ const ContactPage = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                placeholder={t('contact.form.placeholders.name')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="山田太郎"
               />
             </div>
-            
+  
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                メールアドレス <span className="text-red-500">*</span>
+                {t('contact.form.email')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -817,14 +831,14 @@ const ContactPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder={t('contact.form.placeholders.email')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="example@email.com"
               />
             </div>
-            
+  
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                電話番号
+                {t('contact.form.phone')}
               </label>
               <input
                 type="tel"
@@ -832,14 +846,14 @@ const ContactPage = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                placeholder={t('contact.form.placeholders.phone')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="090-1234-5678"
               />
             </div>
-            
+  
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                件名 <span className="text-red-500">*</span>
+                {t('contact.form.subject')} <span className="text-red-500">*</span>
               </label>
               <select
                 id="subject"
@@ -849,17 +863,17 @@ const ContactPage = () => {
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="">選択してください</option>
-                <option value="marine">海業事業について</option>
-                <option value="seaweed">藻の養殖について</option>
-                <option value="partnership">業務提携について</option>
-                <option value="other">その他</option>
+                <option value="">{t('contact.form.placeholders.select')}</option>
+                <option value="marine">{t('contact.form.options.marine')}</option>
+                <option value="seaweed">{t('contact.form.options.seaweed')}</option>
+                <option value="partnership">{t('contact.form.options.partnership')}</option>
+                <option value="other">{t('contact.form.options.other')}</option>
               </select>
             </div>
-            
+  
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                お問い合わせ内容 <span className="text-red-500">*</span>
+                {t('contact.form.message')} <span className="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
@@ -868,11 +882,11 @@ const ContactPage = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                placeholder={t('contact.form.placeholders.message')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="お問い合わせ内容をご記入ください"
               ></textarea>
             </div>
-            
+  
             <button
               type="submit"
               disabled={isSubmitting}
@@ -882,13 +896,14 @@ const ContactPage = () => {
                   : 'bg-blue-600 text-white hover:bg-blue-700'
               }`}
             >
-              {isSubmitting ? '送信中...' : '送信する'}
+              {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
             </button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  
   )
 }
 
