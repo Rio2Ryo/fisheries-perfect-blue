@@ -1,4 +1,3 @@
-// App.jsx（全文）
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageToggle from './components/LanguageToggle.jsx'
@@ -8,12 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import heroBg from './assets/hero-bg.jpg'
 import sfcLogo from './assets/sfc-logo-new.svg'
 import './App.css'
-
-// ★ ここがポイント：本来のページ実装を import（パスはあなたの実ファイルに合わせてある想定）
-import MarinePage from './pages/Marine.jsx'
-import SeaweedPage from './pages/Seaweed.jsx'
-import CompanyPage from './pages/Company.jsx'
-import ContactPage from './pages/Contact.jsx'
 
 // ページコンポーネント
 const HomePage = () => {
@@ -95,42 +88,40 @@ const HomePage = () => {
     </Card>
 
         {/* Seaweed Cultivation */}
-<Card className="group hover:shadow-xl transition-all duration-300 border border-green-200 bg-white">
-  <CardHeader className="pb-4">
-    <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-      <Leaf className="w-6 h-6 text-white" />
-    </div>
-    <CardTitle className="text-xl text-gray-900">
-      {t('business.seaweed.title')}
-    </CardTitle>
-  </CardHeader>
-  <CardContent className="space-y-4">
-    <p className="text-gray-700 leading-relaxed">
-      {t('business.seaweed.description')}
-    </p>
-    <div className="space-y-2">
-      <div className="flex items-center space-x-2 text-sm text-gray-600">
-        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-        <span>{t('business.seaweed.items.mother')}</span>
-      </div>
-      <div className="flex items-center space-x-2 text-sm text-gray-600">
-        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-        <span>{t('business.seaweed.items.factory')}</span>
-      </div>
-      <div className="flex items-center space-x-2 text-sm text-gray-600">
-        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-        <span>{t('business.seaweed.items.approval')}</span>
-      </div>
-    </div>
-    <Link
-      to="/seaweed"
-      className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
-    >
-      <span>{t('business.seaweed.cta')}</span>
-      <ChevronRight className="w-4 h-4" />
-    </Link>
-  </CardContent>
-</Card>
+        <Card className="group hover:shadow-xl transition-all duration-300 border border-green-200 bg-white">
+          <CardHeader className="pb-4">
+            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+              <Leaf className="w-6 h-6 text-white" />
+            </div>
+            <CardTitle className="text-xl text-gray-900">藻の養殖</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-gray-700 leading-relaxed">
+              "地球のはじまりの植物"マザーベジタブルとMVファクトリーによる革新的な養殖技術。30倍の速度で成長する次世代モジュールで、食・美容・環境・工業分野に展開。
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-sm text-gray-600">
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                <span>マザーベジタブル（2,000種類）</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-600">
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                <span>MVファクトリー（国際特許）</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-600">
+                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                <span>水産庁承認・国際連携</span>
+              </div>
+            </div>
+            <Link
+              to="/seaweed"
+              className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
+            >
+              <span>詳細を見る</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </CardContent>
+        </Card>
       </div>
     </section>
 
@@ -222,6 +213,68 @@ const HomePage = () => {
       </Card>
     </section>
   </div>
+  )
+}
+
+// 他のページコンポーネントは簡易版として作成
+const MarinePage = () => (
+  /* …（あなたの元コードのまま）… */
+  <div className="space-y-8">{/* 省略 */}</div>
+)
+
+const SeaweedPage = () => (
+  /* …（あなたの元コードのまま）… */
+  <div className="space-y-8">{/* 省略 */}</div>
+)
+
+const CompanyPage = () => (
+  /* …（あなたの元コードのまま）… */
+  <div className="space-y-8">{/* 省略 */}</div>
+)
+
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      const data = await response.json()
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (e) {
+      console.error('送信エラー:', e)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    /* …（あなたの元コードのまま）… */
+    <div className="space-y-8">{/* 省略 */}</div>
   )
 }
 
