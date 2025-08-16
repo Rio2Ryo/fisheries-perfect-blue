@@ -57,7 +57,7 @@ const HomePage = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
-            {t('business.description')}
+            {t('business.marine.description')}
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -77,7 +77,7 @@ const HomePage = () => {
               to="/marine"
               className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 mt-8 font-medium"
             >
-              <span>{t('business.cta')}</span>
+              <span>{t('business.marine.cta')}</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </CardContent>
@@ -98,15 +98,15 @@ const HomePage = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>{t('seaweed.description.mother')}</span>
+                <span>{t('seaweed.items.description.mother')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>{t('seaweed.description.factory')}</span>
+                <span>{t('seaweed.items.description.factory')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span>{t('seaweed.description.approval')}</span>
+                <span>{t('seaweed.items.description.approval')}</span>
               </div>
             </div>
             <Link
