@@ -1190,9 +1190,9 @@ function App() {
             {t('nav.contact')}
           </Link>
         </div>
-        <div className="text-gray-400 text-sm">
+ {/* <div className="text-gray-400 text-sm">
           {t('footer.tel')}: 0558-34-1025
-        </div>
+        </div> */}
       </div>
     </div>
   </div>
