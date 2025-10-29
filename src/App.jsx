@@ -1162,7 +1162,7 @@ function App() {
       </div>
     </div>
 
-    <div className=" mt-8">
+    <div>
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div className="flex space-x-6 mb-4 md:mb-0 hidden md:flex">
           <Link 
