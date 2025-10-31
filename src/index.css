@@ -1,3 +1,168 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html, body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    color: #4CAF50;
+    opacity: 1;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1.25em;
+    line-height: 1.75;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .container-page {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .container-page {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .btn-primary {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: #000000;
+    border: 1px solid #4CAF50;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 0 !important;
+    min-width: fit-content;
+    width: auto;
+    word-break: keep-all;
+    overflow: visible;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+  .btn-primary > span {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    display: inline !important;
+    word-break: keep-all;
+    overflow: visible;
+    max-width: none !important;
+  }
+  .btn-primary > svg {
+    white-space: nowrap;
+    flex-shrink: 0 !important;
+  }
+  .btn-primary:hover {
+    background-color: #2E7D32;
+    color: #000000;
+    border-color: #2E7D32;
+    opacity: 1;
+  }
+
+  .card-neutral {
+    background-color: #000000 !important;
+    border: 1px solid #2E7D32;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    transition: border-color 0.2s ease;
+  }
+  .card-neutral:hover {
+    border-color: #4CAF50;
+  }
+
+  .title-with-underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .title-with-underline::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3.5px;
+    margin: 0 auto;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(76, 175, 80, 0.3) 15%,
+      rgba(76, 175, 80, 0.6) 30%,
+      #4CAF50 50%,
+      rgba(76, 175, 80, 0.6) 70%,
+      rgba(76, 175, 80, 0.3) 85%,
+      transparent 100%
+    );
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(0.75px);
+  }
+}

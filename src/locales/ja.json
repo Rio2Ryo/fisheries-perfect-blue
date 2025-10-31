@@ -2,7 +2,7 @@
   "nav": {
     "home": "ホーム",
     "marine": "海業",
-    "seaweed": "藻の養殖",
+    "seaweed": "Mother Vegetable",
     "company": "会社概要",
     "contact": "お問い合わせ"
   },
@@ -29,7 +29,7 @@
     }
   },
   "seaweed": {
-      "title": "藻の養殖",
+      "title": "Mother Vegetable",
       "description": "\"地球のはじまりの植物\"マザーベジタブルとMVファクトリーによる革新的な養殖技術。30倍の速度で成長する次世代モジュールで、食・美容・環境・工業分野に展開。",
       "items": {
         "mother": "マザーベジタブル（2,000種類）",
@@ -66,7 +66,7 @@
   "ename": "National Sister Fisheries Promotion Council Co., Ltd.",
   "address": "静岡県賀茂郡河津町谷津河津漁港512-2",
   "eaddress": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
-  "business": "海業・RV・藻の養殖",
+  "business": "海業・RV・Mother Vegetable",
   "cta": "詳細を見る"
 },
 "footer": {
@@ -77,7 +77,7 @@
 "contact": {
   "title": "お問い合わせ",
   "subtitle": "お気軽にお問い合わせください",
-  "description": "海業事業、藻の養殖に関するご質問やご相談がございましたら、お気軽にお問い合わせください。",
+  "description": "海業事業、Mother Vegetableに関するご質問やご相談がございましたら、お気軽にお問い合わせください。",
   "labels": {
     "phone": "電話番号",
     "email": "メールアドレス",
@@ -104,7 +104,7 @@
     },
     "options": {
       "marine": "海業事業について",
-      "seaweed": "藻の養殖について",
+      "seaweed": "Mother Vegetableについて",
       "partnership": "業務提携について",
       "other": "その他"
     }
@@ -140,8 +140,8 @@
     }
   }
 },
-"seaweedPage": {
-  "title": "藻の養殖",
+  "seaweedPage": {
+    "title": "Mother Vegetable",
   "lead": "「地球のはじまりの植物」で世界を満たす革新的な養殖技術",
   "mother": {
     "title": "マザーベジタブル（Mother Vegetables）",
@@ -187,7 +187,7 @@
     }
   },
   "compare": {
-    "title": "従来の藻養殖との比較",
+    "title": "従来の養殖との比較",
     "table": { "headers": { "item": "項目", "mv": "MVファクトリー", "conv": "従来の藻養殖" } },
     "rows": {
       "speed": { "label": "育成スピード", "mv": "◯約30倍の速度で成長", "conv": "✕遅い（週〜月）" },

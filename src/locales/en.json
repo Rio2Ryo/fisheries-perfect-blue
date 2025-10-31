@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "marine": "Marine",
-    "seaweed": "Seaweed",
+    "seaweed": "Mother Vegetable",
     "company": "Company",
     "contact": "Contact"
   },
@@ -29,7 +29,7 @@
     }
   },
   "seaweed": {
-      "title": "Seaweed Cultivation",
+      "title": "Mother Vegetable",
       "description": "\"The Earth's First Plant\" — innovative cultivation technology by Mother Vegetables and MV Factory. With next-generation modules that grow 30 times faster, expanding into food, beauty, environment, and industry fields.",
       "items": {
         "mother": "Mother Vegetables (2,000 types)",
@@ -50,7 +50,7 @@
   },
   "diversity": {
     "title": "Diversified Business Expansion",
-    "description": "With a unique business model combining marine business, RV, and seaweed cultivation, we realize sustainable utilization of marine resources."
+    "description": "With a unique business model combining marine business, RV, and Mother Vegetable, we realize sustainable utilization of marine resources."
   }
 },
 "company": {
@@ -66,7 +66,7 @@
   "ename": "National Sister Fisheries Promotion Council Co., Ltd.",
   "address": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
   "eaddress": "512-2 Yatsu, Kawazu Fishing Port, Kawazu Town, Kamo District, Shizuoka Prefecture, 413-0515, Japan",
-  "business": "Marine Business, RV, and Seaweed Cultivation",
+  "business": "Marine Business, RV, and Mother Vegetable",
   "cta": "Learn More"
 },
 "footer": {
@@ -77,7 +77,7 @@
 "contact": {
   "title": "Contact Us",
   "subtitle": "Feel Free to Reach Out",
-  "description": "If you have any questions or inquiries regarding our marine business or seaweed cultivation, please feel free to contact us.",
+    "description": "If you have any questions or inquiries regarding our marine business or Mother Vegetable, please feel free to contact us.",
   "labels": {
     "phone": "Phone",
     "email": "Email",
@@ -104,7 +104,7 @@
     },
     "options": {
       "marine": "About Marine Business",
-      "seaweed": "About Seaweed Cultivation",
+      "seaweed": "About Mother Vegetable",
       "partnership": "About Partnerships",
       "other": "Other"
     }
@@ -140,8 +140,8 @@
     }
   }
 },
-"seaweedPage": {
-  "title": "Seaweed Cultivation",
+  "seaweedPage": {
+    "title": "Mother Vegetable",
   "lead": "Innovative cultivation technology to enrich the world with the “first plants on Earth.”",
   "mother": {
     "title": "Mother Vegetables",
@@ -187,8 +187,8 @@
     }
   },
   "compare": {
-    "title": "Comparison with Conventional Algae Cultivation",
-    "table": { "headers": { "item": "Item", "mv": "MV Factory", "conv": "Conventional Algae Cultivation" } },
+    "title": "Comparison with Conventional Mother Vegetable Cultivation",
+      "table": { "headers": { "item": "Item", "mv": "MV Factory", "conv": "Conventional Cultivation" } },
     "rows": {
       "speed": { "label": "Growth Speed", "mv": "✓ ~30× faster growth", "conv": "✗ Slow (weeks to months)" },
       "environment": { "label": "Cultivation Environment", "mv": "✓ Fully enclosed, artificial-light controlled", "conv": "✗ Open, weather-dependent" },

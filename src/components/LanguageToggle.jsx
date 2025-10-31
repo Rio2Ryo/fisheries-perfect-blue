@@ -13,7 +13,7 @@ function LanguageToggle({ className = '' }) {
     <button
       type="button"
       onClick={toggleLanguage}
-      className={`px-3 py-2 rounded-md text-sm font-semibold text-gray-700 hover:bg-gray-100 transition-colors ${className}`}
+      className={`px-4 py-2 border border-[#2E7D32] text-sm font-medium text-white hover:bg-[#2E7D32] hover:text-white transition-all duration-200 ${className}`}
       aria-label="Toggle language"
     >
       {label}
