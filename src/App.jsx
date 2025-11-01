@@ -5,7 +5,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Building2, Waves, Ship, Truck, Leaf, MapPin, Phone, Mail, ArrowRight, ChevronRight, Factory, Users, Target, Menu, X } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import heroBg from './assets/hero-bg.jpg'
-import sfcLogo from './assets/sfc-logo-new.svg'
+import sfcLogo from './assets/sfc-logo-test.png'
 import './App.css'
 
 // ページコンポーネント
