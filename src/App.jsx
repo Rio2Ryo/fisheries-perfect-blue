@@ -1031,7 +1031,7 @@ function App() {
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
                   className="h-8 md:h-10 w-auto brightness-0 invert"
-                  style={{ filter: 'brightness(0) invert(1) sepia(100%) saturate(10000%) hue-rotate(80deg)' }}
+                  
                 />
               </Link>
             </div>
@@ -1125,7 +1125,7 @@ function App() {
                   src={sfcLogo} 
                   alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
                   className="h-10 md:h-12 w-auto brightness-0 invert"
-                  style={{ filter: 'brightness(0) invert(1) sepia(100%) saturate(10000%) hue-rotate(80deg)' }}
+                 
                 />
               </div>
               <p className="text-white leading-relaxed text-sm md:text-base">
