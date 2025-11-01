@@ -24,8 +24,7 @@ const HomePage = () => {
         style={{ 
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'brightness(0.55) contrast(1.1)'
+          backgroundPosition: 'center'
         }}
       ></div>
       
