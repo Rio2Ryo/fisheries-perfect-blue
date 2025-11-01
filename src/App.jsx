@@ -39,9 +39,7 @@ const HomePage = () => {
       {/* 上下のグラデーション - より自然なフェード */}
       <div 
         className="absolute inset-0"
-        style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.45) 20%, transparent 50%, rgba(0,0,0,0.45) 80%, rgba(0,0,0,1) 100%)'
-        }}
+       
       ></div>
       
       {/* 左右のグラデーション */}
