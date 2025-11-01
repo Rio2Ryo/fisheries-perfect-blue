@@ -1027,11 +1027,11 @@ function App() {
           <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex items-center flex-shrink-0">
               <Link to="/" className="block">
-                <img 
-                  src={sfcLogo} 
-                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-8 md:h-10 w-auto brightness-0 invert"
-                  
+                <img
+                  src={sfcLogo}
+                  alt="SFC - Sisters Fisheries Cooperative Promotion Council"
+                  className="h-8 md:h-10 w-auto"
+
                 />
               </Link>
             </div>
@@ -1121,11 +1121,11 @@ function App() {
             {/* 左側 */}
             <div>
               <div className="flex items-center space-x-3 mb-8">
-                <img 
-                  src={sfcLogo} 
-                  alt="SFC - Sisters Fisheries Cooperative Promotion Council" 
-                  className="h-10 md:h-12 w-auto brightness-0 invert"
-                 
+                <img
+                  src={sfcLogo}
+                  alt="SFC - Sisters Fisheries Cooperative Promotion Council"
+                  className="h-10 md:h-12 w-auto"
+
                 />
               </div>
               <p className="text-white leading-relaxed text-sm md:text-base">
