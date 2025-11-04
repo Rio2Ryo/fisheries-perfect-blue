@@ -721,8 +721,7 @@ const CompanyPage = () => {
                 <div>
                   <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.name')}</dt>
                   <dd className="text-white">{t('company.name')}</dd>
-                  <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.ename')}</dt>
-                  <dd className="text-white">{t('company.ename')}</dd>
+                  
                 </div>
               </div>
 
@@ -741,8 +740,7 @@ const CompanyPage = () => {
                 <div>
                   <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.address')}</dt>
                   <dd className="text-white">{t('company.address')}</dd>
-                  <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.eaddress')}</dt>
-                  <dd className="text-white">{t('company.eaddress')}</dd>
+                 
                 </div>
               </div>
 
