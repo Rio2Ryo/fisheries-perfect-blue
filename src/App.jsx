@@ -741,7 +741,7 @@ const CompanyPage = () => {
                 <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.rep')}</dt>
                 <dd className="text-white">{t('companyPage.info.values.rep')}</dd>
                   <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.intlDir')}</dt>
-                  <dd className="text-white">Michael Choong Liat Lee</dd>
+                  <dd className="text-white">Michael Lee</dd>
                 </div>
               </div>
 
