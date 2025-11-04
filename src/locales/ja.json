@@ -202,11 +202,11 @@
     "title": "企業情報",
     "labels": {
       "name": "会社名",
-      "ename": "English Name",
+     
       "rep": "代表",
       "intlDir": "International Director",
       "address": "住所",
-      "eaddress": "English Address",
+      
       "tel": "TEL",
       "email": "メール",
       "business": "事業内容"

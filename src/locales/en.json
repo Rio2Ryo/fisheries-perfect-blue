@@ -202,11 +202,11 @@
     "title": "Corporate Information",
     "labels": {
       "name": "Company Name",
-      "ename": "English Name",
+      
       "rep": "Representative",
       "intlDir": "International Director",
       "address": "Address",
-      "eaddress": "English Address",
+      
       "tel": "TEL",
       "email": "Email",
       "business": "Business"
