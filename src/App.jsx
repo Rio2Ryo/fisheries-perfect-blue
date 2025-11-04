@@ -61,7 +61,7 @@ const HomePage = () => {
           <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 md:mb-8 font-light">
             {t('hero.subtitle')}
           </p>
-          <p className="text-base sm:text-lg text-white max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
+          <p className="text-base sm:text-lg text-white max-w-2xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
          {/* <Link
