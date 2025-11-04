@@ -760,7 +760,7 @@ const CompanyPage = () => {
                 <Mail className="w-5 h-5 text-[#4CAF50] mt-1" />
                 <div>
                   <dt className="font-semibold text-[#4CAF50]">{t('companyPage.info.labels.email')}</dt>
-                  <dd className="text-white">contact@sfcpc.co.jp</dd>
+                  <dd className="text-white">contact@nsfpcouncil.com</dd>
                 </div>
               </div>
 

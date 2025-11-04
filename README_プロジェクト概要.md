@@ -146,7 +146,7 @@ fisheries-perfect-blue/
 - **代表者**: 渡邉昌宏
 - **住所**: 〒413-0515　静岡県賀茂郡河津町谷津河津漁港512-2
 - **TEL**: 0558-34-1025
-- **メール**: contact@sfcpc.co.jp
+- **メール**: contact@nsfpcouncil.com
 
 ## ライセンス
 
