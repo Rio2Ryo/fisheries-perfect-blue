@@ -64,13 +64,13 @@ const HomePage = () => {
           <p className="text-base sm:text-lg text-white max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
             {t('hero.description')}
           </p>
-          <Link
+         {/* <Link
             to="/contact"
             className="btn-primary"
           >
             <span>{t('hero.cta')}</span>
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </Link>*/}
         </div>
       </div>
     </section>
