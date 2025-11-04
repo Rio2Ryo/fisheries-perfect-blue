@@ -223,10 +223,7 @@ const HomePage = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <Building2 className="w-5 h-5 invisible flex-shrink-0" />
-                <div>
-                  <span className="mr-3">{t('company.labels.ename')}</span>
-                  <span className="text-white">{t('company.ename')}</span>
-                </div>
+                
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#4CAF50]" />
@@ -235,13 +232,7 @@ const HomePage = () => {
                   <span className="text-white">{t('company.address')}</span>
                 </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 invisible flex-shrink-0" />
-                <div>
-                  <span className="mr-3">{t('company.labels.eaddress')}</span>
-                  <span className="text-white">{t('company.eaddress')}</span>
-                </div>
-              </div>
+             
               <div className="flex items-start space-x-3">
                 <Waves className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#4CAF50]" />
                 <div>
