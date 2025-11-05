@@ -197,16 +197,18 @@
   "title": "会社概要",
   "info": {
     "values": {
-      "rep": "渡邊昌宏"
+      "rep": "渡邊昌宏",
+      "chairman": "森 憲吾"
     },
     "title": "企業情報",
     "labels": {
       "name": "会社名",
-     
+
       "rep": "代表",
       "intlDir": "International Director",
+      "chairman": "会長＆社主",
       "address": "住所",
-      
+
       "tel": "TEL",
       "email": "メール",
       "business": "事業内容"

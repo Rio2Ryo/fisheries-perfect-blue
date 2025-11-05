@@ -197,16 +197,18 @@
   "title": "Company Overview",
   "info": {
     "values": {
-        "rep": "Masahiro Watanabe"
+        "rep": "Masahiro Watanabe",
+        "chairman": "Kengo Mori"
       },
     "title": "Corporate Information",
     "labels": {
       "name": "Company Name",
-      
+
       "rep": "Representative",
       "intlDir": "International Director",
+      "chairman": "Chairman & Owner",
       "address": "Address",
-      
+
       "tel": "TEL",
       "email": "Email",
       "business": "Business"
