@@ -1169,9 +1169,7 @@ function App() {
 
             {/* 右側 */}
             <div>
-              <h4 className="text-sm font-medium mb-6 tracking-wide uppercase text-white">
-                {t('footer.businessTitle')}
-              </h4>
+              
               <div className="space-y-3">
                 <a
                   href="#business-overview"
@@ -1186,7 +1184,7 @@ function App() {
                     }
                   }}
                 >
-                  事業概要
+                  {t('nav.business')}
                 </a>
                 <Link
                   to="/marine"
