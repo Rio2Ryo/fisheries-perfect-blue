@@ -76,7 +76,7 @@ const HomePage = () => {
     </section>
 
     {/* Business Overview */}
-    <section className="section bg-black">
+    <section id="business-overview" className="section bg-black">
       <div className="text-center mb-10 md:mb-14">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-normal text-white mb-3 md:mb-4">{t('business.title')}</h3>
       </div>
@@ -996,6 +996,7 @@ function App() {
 
   const navigationItems = [
     { id: 'home', label: 'ホーム', path: '/' },
+    { id: 'business', label: '事業概要', path: '#business-overview', isHash: true },
     { id: 'marine', label: '海業', path: '/marine' },
     { id: 'seaweed', label: '藻の養殖', path: '/mothervegetable' },
     { id: 'company', label: '会社概要', path: '/company' },
@@ -1030,17 +1031,39 @@ function App() {
                 <ul className="flex items-center space-x-10">
                   {navigationItems.map((item) => (
                     <li key={item.id}>
-                      <Link
-                        to={item.path}
-                        className={`text-sm font-normal tracking-wide ${
-                          location.pathname === item.path
-                            ? 'text-[#4CAF50]'
-                            : 'text-white hover:text-[#4CAF50]'
-                        }`}
-                        aria-current={location.pathname === item.path ? 'page' : undefined}
-                      >
-                        {t(`nav.${item.id}`)}
-                      </Link>
+                      {item.isHash ? (
+                        <a
+                          href={item.path}
+                          className={`text-sm font-normal tracking-wide ${
+                            location.pathname === '/' && location.hash === item.path
+                              ? 'text-[#4CAF50]'
+                              : 'text-white hover:text-[#4CAF50]'
+                          }`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.getElementById('business-overview');
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' });
+                            } else {
+                              window.location.href = '/#business-overview';
+                            }
+                          }}
+                        >
+                          {t(`nav.${item.id}`)}
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          className={`text-sm font-normal tracking-wide ${
+                            location.pathname === item.path
+                              ? 'text-[#4CAF50]'
+                              : 'text-white hover:text-[#4CAF50]'
+                          }`}
+                          aria-current={location.pathname === item.path ? 'page' : undefined}
+                        >
+                          {t(`nav.${item.id}`)}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -1069,18 +1092,41 @@ function App() {
             <ul className="px-4 pt-4 pb-6 space-y-1">
               {navigationItems.map((item) => (
                 <li key={item.id}>
-                  <Link
-                    to={item.path}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block w-full text-left px-3 py-2.5 text-base font-normal ${
-                      location.pathname === item.path
-                        ? 'text-[#4CAF50]'
-                        : 'text-white hover:text-[#4CAF50]'
-                    }`}
-                    aria-current={location.pathname === item.path ? 'page' : undefined}
-                  >
-                    {t(`nav.${item.id}`)}
-                  </Link>
+                  {item.isHash ? (
+                    <a
+                      href={item.path}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setMobileMenuOpen(false);
+                        const element = document.getElementById('business-overview');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#business-overview';
+                        }
+                      }}
+                      className={`block w-full text-left px-3 py-2.5 text-base font-normal ${
+                        location.pathname === '/' && location.hash === item.path
+                          ? 'text-[#4CAF50]'
+                          : 'text-white hover:text-[#4CAF50]'
+                      }`}
+                    >
+                      {t(`nav.${item.id}`)}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`block w-full text-left px-3 py-2.5 text-base font-normal ${
+                        location.pathname === item.path
+                          ? 'text-[#4CAF50]'
+                          : 'text-white hover:text-[#4CAF50]'
+                      }`}
+                      aria-current={location.pathname === item.path ? 'page' : undefined}
+                    >
+                      {t(`nav.${item.id}`)}
+                    </Link>
+                  )}
                 </li>
               ))}
               <li>
@@ -1127,7 +1173,22 @@ function App() {
                 {t('footer.businessTitle')}
               </h4>
               <div className="space-y-3">
-                <Link 
+                <a
+                  href="#business-overview"
+                  className="block text-white hover:text-[#4CAF50] text-sm md:text-base transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('business-overview');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.location.href = '/#business-overview';
+                    }
+                  }}
+                >
+                  事業概要
+                </a>
+                <Link
                   to="/marine"
                   className="block text-white hover:text-[#4CAF50] text-sm md:text-base transition-colors"
                 >
