@@ -79,7 +79,7 @@ const HomePage = () => {
         </Card>
 
         {/* Seaweed Cultivation */}
-        <Card className="group hover:shadow-xl transition-all duration-300 border border-green-200 bg-white">
+        <Card className="group hover:shadow-lg transition-all duration-300 border border-green-200 bg-white">
           <CardHeader className="pb-4">
             <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
               <Leaf className="w-6 h-6 text-white" />
